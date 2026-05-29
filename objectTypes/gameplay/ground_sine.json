@@ -1,0 +1,39 @@
+{
+	"name": "ground_sine",
+	"plugin-id": "TiledBg",
+	"sid": 724274620760100,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 212835840851645
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sine2",
+			"sid": 130534447719568
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 756446086568528
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 48,
+		"height": 48,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 7140912,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

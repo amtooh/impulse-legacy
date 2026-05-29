@@ -1,0 +1,28 @@
+{
+	"name": "editor_control_instanceselect3",
+	"plugin-id": "NinePatch",
+	"sid": 709630699782398,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "skymen_BetterOutline",
+			"name": "BetterOutline"
+		}
+	],
+	"image": {
+		"width": 12,
+		"height": 12,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 6799713,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

@@ -1,0 +1,959 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 44903,
+	"name": "impulse",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": true,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "AJAX",
+			"name": "AJAX",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Arr",
+			"name": "Array",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Button",
+			"name": "Button",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Json",
+			"name": "JSON",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "LocalStorage",
+			"name": "Local storage",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "NinePatch",
+			"name": "9-patch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Particles",
+			"name": "Particles",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "PlatformInfo",
+			"name": "Platform info",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TextBox",
+			"name": "Text input",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Timeline",
+			"name": "Timeline controller",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "filechooser",
+			"name": "File chooser",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "gamepad",
+			"name": "Gamepad",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Anchor",
+			"name": "Anchor",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "DragnDrop",
+			"name": "Drag & Drop",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Fade",
+			"name": "Fade",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Pin",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Platform",
+			"name": "Platform",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Rotate",
+			"name": "Rotate",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "Richard Lems_GaussianBlur",
+			"name": "GuassianBlur",
+			"author": "Richard Lems",
+			"bundled": true,
+			"version": "1.1.1"
+		},
+		{
+			"type": "effect",
+			"id": "blurhorizontal",
+			"name": "Blur horizontal",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "blurvertical",
+			"name": "Blur vertical",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "brightness",
+			"name": "Brightness",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "bulge",
+			"name": "Bulge",
+			"author": "Brad Larson",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "contrast",
+			"name": "Contrast",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "federicoCalchera_gradientMap",
+			"name": "GradientMap",
+			"author": "Gigatron, FedericoCalchera",
+			"bundled": true,
+			"version": "1.1.0.0"
+		},
+		{
+			"type": "effect",
+			"id": "glowhorizontal",
+			"name": "Glow horizontal",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "glowvertical",
+			"name": "Glow vertical",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "grayscale",
+			"name": "Grayscale",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "hsladjust",
+			"name": "Adjust HSL",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "pixellate",
+			"name": "Pixellate",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "skymen_BetterOutline",
+			"name": "Better Outline",
+			"author": "skymen",
+			"bundled": true,
+			"version": "2.0.0.4"
+		},
+		{
+			"type": "effect",
+			"id": "vignette",
+			"name": "Vignette",
+			"author": "Brad Larson",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "water",
+			"name": "Water",
+			"author": "Viktor Korsun",
+			"bundled": false
+		}
+	],
+	"uniqueId": "zp2lnca5okq",
+	"objectTypes": {
+		"items": [
+			"blackfade",
+			"editorhall_levelname",
+			"editorhall_newlevel",
+			"editorhall_newlevelback",
+			"FileChooser2",
+			"spring",
+			"dash_item",
+			"Particles",
+			"dash_effect",
+			"dash_item2",
+			"dash_effect2",
+			"dash_effect3",
+			"Sprite",
+			"dash_available_effect",
+			"dash_effect4",
+			"player_run_particles_sprite",
+			"tyler_the_background",
+			"doublejump_item",
+			"doublejump_spawn",
+			"dash_effect5",
+			"dash_effect6",
+			"teleport_a",
+			"editor_consoleee",
+			"ui_sliderbar_base",
+			"ui_sliderbar_value",
+			"sliderbar_pip"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"PlatformInfo",
+					"Browser",
+					"Gamepad",
+					"Audio",
+					"Keyboard",
+					"lvl_storage",
+					"Mouse",
+					"TimelineController",
+					"Touch",
+					"AJAX",
+					"settings"
+				],
+				"subfolders": [],
+				"name": "plugins"
+			},
+			{
+				"items": [
+					"bg",
+					"ground",
+					"ground_sine"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"pause_bg",
+							"alert_bg",
+							"alert_text",
+							"ui_key_a",
+							"ui_key_b"
+						],
+						"subfolders": [],
+						"name": "ui"
+					},
+					{
+						"items": [
+							"acid_particles",
+							"player_particles",
+							"effect_0",
+							"spawn_effect_0",
+							"player_run_particles"
+						],
+						"subfolders": [],
+						"name": "particles"
+					},
+					{
+						"items": [
+							"death_trig",
+							"key_spawn_a",
+							"key_spawn_b",
+							"player_death_pos",
+							"player_spawn",
+							"cam",
+							"piston_fall"
+						],
+						"subfolders": [],
+						"name": "dev"
+					},
+					{
+						"items": [
+							"acid",
+							"saw",
+							"spike"
+						],
+						"subfolders": [],
+						"name": "obstacles"
+					},
+					{
+						"items": [
+							"key_a",
+							"key_b",
+							"key_blue",
+							"key_purple"
+						],
+						"subfolders": [],
+						"name": "keys"
+					},
+					{
+						"items": [
+							"door",
+							"door_blue",
+							"door_purple",
+							"doora",
+							"doorb"
+						],
+						"subfolders": [],
+						"name": "doors"
+					},
+					{
+						"items": [
+							"player",
+							"player_skin"
+						],
+						"subfolders": [],
+						"name": "player"
+					},
+					{
+						"items": [
+							"result_text",
+							"counting"
+						],
+						"subfolders": [],
+						"name": "results"
+					}
+				],
+				"name": "gameplay"
+			},
+			{
+				"items": [
+					"menu_bg",
+					"brightness_preview",
+					"game_title",
+					"pressanykey",
+					"menu_bg2"
+				],
+				"subfolders": [],
+				"name": "menu"
+			},
+			{
+				"items": [
+					"mobui_a",
+					"mobui_down",
+					"mobui_left",
+					"mobui_pause",
+					"mobui_right",
+					"mobui_up"
+				],
+				"subfolders": [],
+				"name": "mobui"
+			},
+			{
+				"items": [
+					"ui_flag",
+					"ui_button",
+					"title_text",
+					"button_text",
+					"devalert",
+					"userlevel_loadingtext",
+					"leveltitle",
+					"speedrun_gui",
+					"editor_alert",
+					"speedrun_time",
+					"sliderbar_text"
+				],
+				"subfolders": [],
+				"name": "ui"
+			},
+			{
+				"items": [
+					"intro_letters",
+					"intro_bg"
+				],
+				"subfolders": [],
+				"name": "intro"
+			},
+			{
+				"items": [
+					"ui_text",
+					"spike_edit",
+					"saw_edit",
+					"player_spawn_edit",
+					"key_spawn_b_edit",
+					"key_spawn_a_edit",
+					"JSON",
+					"FileChooser",
+					"editor_ui_panel",
+					"editor_ui_objectstext",
+					"editor_ui_instanceselected",
+					"editor_instance_icons",
+					"editor_controls_info",
+					"editor_console2",
+					"editor_console",
+					"door_edit"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"editor_bg_grid"
+						],
+						"subfolders": [],
+						"name": "ui"
+					},
+					{
+						"items": [
+							"editor_control_instanceselect",
+							"editor_control_instancesize",
+							"editor_9patchbg",
+							"editor_control_instanceselect3",
+							"editor_uibg"
+						],
+						"subfolders": [],
+						"name": "manipulate"
+					},
+					{
+						"items": [
+							"ground_edit",
+							"acid_edit"
+						],
+						"subfolders": [],
+						"name": "instance"
+					},
+					{
+						"items": [
+							"obj"
+						],
+						"subfolders": [],
+						"name": "editor_plugins"
+					}
+				],
+				"name": "editor"
+			}
+		]
+	},
+	"functionsName": "Functions",
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [
+			"instance_sprite",
+			"instance_tile"
+		],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [],
+		"subfolders": [
+			{
+				"items": [
+					"emptylevel2",
+					"emptylevel",
+					"level 1",
+					"level 2",
+					"level 3",
+					"level 4",
+					"level 5",
+					"level 6",
+					"level 7",
+					"level 8",
+					"level 9",
+					"level 10",
+					"level 11",
+					"level 12",
+					"level 13",
+					"level 14",
+					"level 15",
+					"level 16"
+				],
+				"subfolders": [],
+				"name": "levels"
+			},
+			{
+				"items": [
+					"counting_result",
+					"menu",
+					"intro"
+				],
+				"subfolders": [],
+				"name": "menues"
+			},
+			{
+				"items": [
+					"obj_bank",
+					"mobui",
+					"pause",
+					"button",
+					"transition",
+					"devalert",
+					"langselect"
+				],
+				"subfolders": [],
+				"name": "misc"
+			},
+			{
+				"items": [
+					"editor_hall",
+					"editor",
+					"editor_objbank",
+					"user level"
+				],
+				"subfolders": [],
+				"name": "editor"
+			}
+		]
+	},
+	"eventSheets": {
+		"items": [
+			"gameplay",
+			"mobbui",
+			"button",
+			"music",
+			"devalert",
+			"counting",
+			"quality",
+			"newmenu",
+			"intro",
+			"editor_hall",
+			"editor events",
+			"userlevel_gameplay",
+			"gamemode"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [
+				{
+					"name": "effect_0.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 194256533402347,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "effect_1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 477162310201823,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "effect_2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 942886853243791,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "key_sound.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 492859748945082,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "ui_select.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 554148169573164,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "effect_2new.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 423435935056497,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "player_jump_sound.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 377389894694490,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "player_landed_sound.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 659722448150473,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "player_run_sound.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 170421247789686,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "dash_sound.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 975151643174149,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"music": {
+			"items": [
+				{
+					"name": "level_loop.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 324871035847968,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "menu_loop.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 507192873648968,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [
+				{
+					"name": "friendlyscribbles.ttf",
+					"type": "application/font-sfnt",
+					"sid": 147709240368562,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Nunito-Bold.ttf",
+					"type": "application/font-sfnt",
+					"sid": 923673626318607,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 449120231256462,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 970015844547243,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 330945606847522,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 407468700386245,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 814592920299571,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 931521272970420,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 302326200784727,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				},
+				{
+					"name": "icon-513.png",
+					"type": "image/png",
+					"sid": 500052085220638,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [],
+			"subfolders": [
+				{
+					"items": [
+						{
+							"name": "empty.json",
+							"type": "application/json",
+							"sid": 812878658288912,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "editor"
+				}
+			]
+		}
+	},
+	"timelines": {
+		"items": [
+			"intro_transition"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"flowcharts": {
+		"items": [],
+		"subfolders": []
+	},
+	"properties": {
+		"description": "impulse by тоха братан",
+		"version": "0.2.0",
+		"autoIncrementVersion": false,
+		"author": "tohabratan",
+		"authorEmail": "",
+		"authorWebsite": "",
+		"appId": "com.tohabratan.impulse",
+		"pixelRounding": false,
+		"zAxisScale": "normalized",
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": false,
+		"fullscreenMode": "scale-outer",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"webgpu": "auto",
+		"multitexturing": "auto",
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"sampling": "nearest",
+		"downscaling": "low",
+		"renderingMode": "2d",
+		"anisotropicFiltering": "auto",
+		"zNear": 1,
+		"zFar": 10000,
+		"maxSpriteSheetSize": 0,
+		"loaderStyle": "percent",
+		"preloadSounds": true,
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https",
+		"exportFileStructure": "folders",
+		"uidAllocationMode": "increment"
+	},
+	"viewportWidth": 640,
+	"viewportHeight": 360,
+	"firstLayout": "intro"
+}

@@ -1,0 +1,74 @@
+{
+	"name": "saw",
+	"plugin-id": "Sprite",
+	"sid": 724911977928042,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Rotate",
+			"name": "Rotate",
+			"sid": 233995530668285
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 98,
+						"height": 98,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6852799,
+						"collisionPoly": {
+							"points": [
+								0.4489795918367347,
+								0.01020408163265306,
+								0.5510204081632653,
+								0.01020408163265306,
+								0.5510204081632653,
+								0.4489795918367347,
+								0.9897959183673469,
+								0.4489795918367347,
+								0.9897959183673469,
+								0.5510204081632653,
+								0.551020408163265,
+								0.5510204081632653,
+								0.5510204081632653,
+								0.9897959183673469,
+								0.4489795918367347,
+								0.9897959183673469,
+								0.4489795918367347,
+								0.5510204081632653,
+								0.01020408163265306,
+								0.5510204081632653,
+								0.01020408163265306,
+								0.4489795918367347,
+								0.4489795918367347,
+								0.4489795918367347
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 275742057538448,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,47 @@
+{
+	"name": "ui_sliderbar_base",
+	"plugin-id": "NinePatch",
+	"sid": 533814940249669,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "text",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 837123067293339
+		},
+		{
+			"name": "value",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 433264713217849
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "skymen_BetterOutline",
+			"name": "BetterOutline"
+		},
+		{
+			"effectId": "skymen_BetterOutline",
+			"name": "BetterOutline2"
+		}
+	],
+	"image": {
+		"width": 12,
+		"height": 12,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 5150603,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

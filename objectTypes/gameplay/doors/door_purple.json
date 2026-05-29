@@ -1,0 +1,34 @@
+{
+	"name": "door_purple",
+	"plugin-id": "TiledBg",
+	"sid": 746561746445086,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 584237191379240
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 411329037006739
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 24,
+		"height": 24,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 5107294,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

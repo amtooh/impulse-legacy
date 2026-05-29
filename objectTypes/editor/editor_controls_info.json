@@ -1,0 +1,15 @@
+{
+	"name": "editor_controls_info",
+	"plugin-id": "Text",
+	"sid": 894297615334009,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "skymen_BetterOutline",
+			"name": "BetterOutline"
+		}
+	]
+}

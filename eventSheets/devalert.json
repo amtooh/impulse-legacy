@@ -1,0 +1,640 @@
+{
+	"name": "devalert",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "devalert",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 811141009542949
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 367407650997287
+				},
+				{
+					"id": "has-tags",
+					"objectClass": "devalert",
+					"sid": 950781818981274,
+					"parameters": {
+						"tags": "\"perf\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "devalert",
+					"sid": 365373586600152,
+					"parameters": {
+						"text": "projectname&\" \"&projectversion&newline&\n\"fps: \"&fps&\n\" I cpu: \"&round(cpuutilisation*100)&\"%\"&\" I gpu: \"&round(gpuutilisation*100)&\"%\"&newline&\nobjectcount&\" obj\"\n"
+					}
+				}
+			],
+			"sid": 631548743249693
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 597480179836614
+				},
+				{
+					"id": "has-tags",
+					"objectClass": "devalert",
+					"sid": 340412445692625,
+					"parameters": {
+						"tags": "\"perf_dts\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 858808743628516,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 394698366494353,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"menu\""
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 760945482681844,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"counting_result\""
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 244350111474240,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"langselect\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "devalert",
+							"sid": 197434779802240,
+							"parameters": {
+								"text": "\"\""
+							}
+						}
+					],
+					"sid": 527031437478150,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 524554580544814,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"menu\""
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 239954564312100,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"counting_result\""
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 615556500026736,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"langselect\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "devalert",
+							"sid": 728389804363668,
+							"parameters": {
+								"text": "\"died: \"&counting_dts&\" times\""
+							}
+						}
+					],
+					"sid": 318655312660371
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 128447946352978
+				},
+				{
+					"id": "has-tags",
+					"objectClass": "devalert",
+					"sid": 305989789727336,
+					"parameters": {
+						"tags": "\"perf_time\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 319630391974944,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 307872005844865,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"menu\""
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 112047934321940,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"counting_result\""
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 872952698263157,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"langselect\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "devalert",
+							"sid": 943086832403505,
+							"parameters": {
+								"text": "\"\""
+							}
+						}
+					],
+					"sid": 180845191945930,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 759588225947829,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"menu\""
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 106414427051894,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"counting_result\""
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 356054584483317,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"langselect\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 154466998459479,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 942493390488721,
+									"parameters": {
+										"variable": "counting_min",
+										"comparison": 2,
+										"value": "10"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 675096047826470,
+									"parameters": {
+										"variable": "counting_sec",
+										"comparison": 2,
+										"value": "10"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "devalert",
+									"sid": 819311222519811,
+									"parameters": {
+										"text": "\"time:  0\"&counting_min&\":0\"&counting_sec\n"
+									}
+								}
+							],
+							"sid": 294267961182766
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 779263573793906,
+									"parameters": {
+										"variable": "counting_min",
+										"comparison": 4,
+										"value": "10"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 290498793155277,
+									"parameters": {
+										"variable": "counting_sec",
+										"comparison": 4,
+										"value": "10"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "devalert",
+									"sid": 472401997271460,
+									"parameters": {
+										"text": "\"time:  \"&counting_min&\":\"&counting_sec\n"
+									}
+								}
+							],
+							"sid": 485587985879984
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 333981005728129,
+									"parameters": {
+										"variable": "counting_min",
+										"comparison": 2,
+										"value": "10"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 512095962517177,
+									"parameters": {
+										"variable": "counting_sec",
+										"comparison": 5,
+										"value": "10"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "devalert",
+									"sid": 728711370139279,
+									"parameters": {
+										"text": "\"time:  0\"&counting_min&\":\"&counting_sec\n"
+									}
+								}
+							],
+							"sid": 950164931233126
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 394563697644441,
+									"parameters": {
+										"variable": "counting_min",
+										"comparison": 5,
+										"value": "10"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 133123816578825,
+									"parameters": {
+										"variable": "counting_sec",
+										"comparison": 2,
+										"value": "10"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "devalert",
+									"sid": 697229431481852,
+									"parameters": {
+										"text": "\"time:  \"&counting_min&\":0\"&counting_sec\n"
+									}
+								}
+							],
+							"sid": 845026134564997
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 902350996337823,
+									"parameters": {
+										"variable": "counting_min",
+										"comparison": 5,
+										"value": "10"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 964196233037667,
+									"parameters": {
+										"variable": "counting_sec",
+										"comparison": 5,
+										"value": "10"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "devalert",
+									"sid": 939836224389648,
+									"parameters": {
+										"text": "\"time:  \"&counting_min&\":\"&counting_sec\n"
+									}
+								}
+							],
+							"sid": 149034612995206
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 634269222652879
+				},
+				{
+					"id": "has-tags",
+					"objectClass": "devalert",
+					"sid": 942336367849499,
+					"parameters": {
+						"tags": "\"perf_2\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 349834134201413,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 476992335659218,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"menu\""
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 131671596258653,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"counting_result\""
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 669175919325227,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"langselect\""
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 987754153481935,
+							"parameters": {
+								"variable": "player_exist"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "devalert",
+							"sid": 671357649596475,
+							"parameters": {
+								"text": "\"player pos: \"&round(player.X)&\", \"&round(player.Y)&newline&\n\"player direction: \"&player_skin.dir&newline&\n\"player anim: \"&player_skin.AnimationName&newline&\n\"camera dir: \"&player.cam_dir&newline&\n\"player vectorX: \"&player.Platform.VectorX&newline&\n\"player vectorY: \"&player.Platform.VectorY\n"
+							}
+						}
+					],
+					"sid": 212441900394494
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 182038746400739,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"menu\""
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 299074289321581,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"counting_result\""
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 956862568979511,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"langselect\""
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 636886738984790,
+							"parameters": {
+								"variable": "player_exist"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "devalert",
+							"sid": 543928951743345,
+							"parameters": {
+								"text": "\"\""
+							}
+						}
+					],
+					"sid": 187817317763056,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 567597870634156,
+					"parameters": {
+						"variable": "devalert"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 743051586453032,
+					"parameters": {
+						"layer": "\"devalert\"",
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 240692191446607
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 867758912180617,
+					"parameters": {
+						"variable": "devalert"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 799128450000363,
+					"parameters": {
+						"layer": "\"devalert\"",
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 634535915175954
+		}
+	],
+	"sid": 214972993879385
+}

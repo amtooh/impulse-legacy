@@ -1,0 +1,23 @@
+{
+	"name": "editor_control_instanceselect",
+	"plugin-id": "NinePatch",
+	"sid": 968529034441896,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 12,
+		"height": 12,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 4469626,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

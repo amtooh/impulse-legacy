@@ -1,0 +1,434 @@
+{
+	"name": "mobbui",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "mobui_opacity_changespeed",
+			"type": "number",
+			"initialValue": "0.4",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 621634899424516
+		},
+		{
+			"eventType": "variable",
+			"name": "mobui",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 891471758946132
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 101253182098865,
+					"parameters": {
+						"object": "mobui_left"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "mobui_left",
+					"sid": 895845943822840,
+					"parameters": {
+						"opacity": "lerp(Self.Opacity, 25, mobui_opacity_changespeed * 60 * dt)"
+					}
+				}
+			],
+			"sid": 602071396419593
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 850839126827937,
+					"parameters": {
+						"object": "mobui_left"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "mobui_left",
+					"sid": 749242062239655,
+					"parameters": {
+						"opacity": "lerp(Self.Opacity, 75, mobui_opacity_changespeed * 60 * dt)"
+					}
+				}
+			],
+			"sid": 970842254721116
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 771054009107333,
+					"parameters": {
+						"object": "mobui_right"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "mobui_right",
+					"sid": 593759455821472,
+					"parameters": {
+						"opacity": "lerp(Self.Opacity, 25, mobui_opacity_changespeed * 60 * dt)"
+					}
+				}
+			],
+			"sid": 814398124127449
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 151185510353253,
+					"parameters": {
+						"object": "mobui_right"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "mobui_right",
+					"sid": 692737307218423,
+					"parameters": {
+						"opacity": "lerp(Self.Opacity, 75, mobui_opacity_changespeed * 60 * dt)"
+					}
+				}
+			],
+			"sid": 518612079465406
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 865027944073672,
+					"parameters": {
+						"object": "mobui_a"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "mobui_a",
+					"sid": 109618983997284,
+					"parameters": {
+						"opacity": "lerp(Self.Opacity, 25, mobui_opacity_changespeed * 60 * dt)"
+					}
+				}
+			],
+			"sid": 340930036477024
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 209628494347130,
+					"parameters": {
+						"object": "mobui_a"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "mobui_a",
+					"sid": 837435813763954,
+					"parameters": {
+						"opacity": "lerp(Self.Opacity, 75, mobui_opacity_changespeed * 60 * dt)"
+					}
+				}
+			],
+			"sid": 375624974212192
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 803281410031508,
+					"parameters": {
+						"object": "mobui_down"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "mobui_down",
+					"sid": 458041564126180,
+					"parameters": {
+						"opacity": "lerp(Self.Opacity, 25, mobui_opacity_changespeed * 60 * dt)"
+					}
+				}
+			],
+			"sid": 461859317319883
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 378135861861932,
+					"parameters": {
+						"object": "mobui_down"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "mobui_down",
+					"sid": 138170398411955,
+					"parameters": {
+						"opacity": "lerp(Self.Opacity, 75, mobui_opacity_changespeed * 60 * dt)"
+					}
+				}
+			],
+			"sid": 333533195739922
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 171960515570320,
+					"parameters": {
+						"object": "mobui_up"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "mobui_up",
+					"sid": 911392556877227,
+					"parameters": {
+						"opacity": "lerp(Self.Opacity, 25, mobui_opacity_changespeed * 60 * dt)"
+					}
+				}
+			],
+			"sid": 926409480626498
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 440715696605825,
+					"parameters": {
+						"object": "mobui_up"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "mobui_up",
+					"sid": 623018015253671,
+					"parameters": {
+						"opacity": "lerp(Self.Opacity, 75, mobui_opacity_changespeed * 60 * dt)"
+					}
+				}
+			],
+			"sid": 170750932885158
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 375145822494014,
+					"parameters": {
+						"object": "mobui_pause"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "mobui_pause",
+					"sid": 969668721479869,
+					"parameters": {
+						"opacity": "lerp(Self.Opacity, 25, mobui_opacity_changespeed * 60 * dt)"
+					}
+				}
+			],
+			"sid": 682793673676740
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 963383849252198,
+					"parameters": {
+						"object": "mobui_pause"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "mobui_pause",
+					"sid": 576814700735987,
+					"parameters": {
+						"opacity": "lerp(Self.Opacity, 75, mobui_opacity_changespeed * 60 * dt)"
+					}
+				}
+			],
+			"sid": 124661807978031
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 479214535416671,
+					"parameters": {
+						"variable": "mobui"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 434387895256002,
+					"parameters": {
+						"layer": "\"mobui\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 315024098003206,
+					"parameters": {
+						"layer": "\"mobui\"",
+						"interactive": true
+					}
+				}
+			],
+			"sid": 459435822347025
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 617589849098136,
+					"parameters": {
+						"variable": "mobui"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 911038467578026,
+					"parameters": {
+						"layer": "\"mobui\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 655260606964807,
+					"parameters": {
+						"layer": "\"mobui\"",
+						"interactive": false
+					}
+				}
+			],
+			"sid": 498369212630705
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-mobile",
+					"objectClass": "PlatformInfo",
+					"sid": 543178263248846
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 648473981782863,
+					"parameters": {
+						"variable": "mobui",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 851511083357337
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-mobile",
+					"objectClass": "PlatformInfo",
+					"sid": 609297151162752,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 303509405091352,
+					"parameters": {
+						"variable": "mobui",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 764065720605861
+		}
+	],
+	"sid": 524466803092012
+}

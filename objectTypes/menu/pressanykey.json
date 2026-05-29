@@ -1,0 +1,26 @@
+{
+	"name": "pressanykey",
+	"plugin-id": "Text",
+	"sid": 899672703057792,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 274051880084476
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 769162543074232
+		}
+	],
+	"effectTypes": [
+		{
+			"effectId": "skymen_BetterOutline",
+			"name": "BetterOutline"
+		}
+	]
+}

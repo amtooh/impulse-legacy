@@ -1,0 +1,12 @@
+{
+	"name": "instance_tile",
+	"plugin-id": "TiledBg",
+	"sid": 493532055200565,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"ground_edit",
+		"acid_edit"
+	]
+}

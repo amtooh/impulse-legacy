@@ -1,0 +1,528 @@
+{
+	"name": "editor_hall",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "button"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "devalert"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "quality"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "music"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 500319725841681
+				}
+			],
+			"actions": [
+				{
+					"id": "set-image-offset-x",
+					"objectClass": "menu_bg",
+					"sid": 212362575672367,
+					"parameters": {
+						"offset-x": "Self.ImageOffsetX+0.25"
+					}
+				},
+				{
+					"id": "set-image-offset-y",
+					"objectClass": "menu_bg",
+					"sid": 831557474132837,
+					"parameters": {
+						"offset-y": "Self.ImageOffsetX"
+					}
+				},
+				{
+					"id": "set-image-offset-x",
+					"objectClass": "menu_bg2",
+					"sid": 452458969223558,
+					"parameters": {
+						"offset-x": "Self.ImageOffsetX+0.35"
+					}
+				},
+				{
+					"id": "set-image-offset-y",
+					"objectClass": "menu_bg2",
+					"sid": 614770687175155,
+					"parameters": {
+						"offset-y": "Self.ImageOffsetX"
+					}
+				}
+			],
+			"sid": 520259885240050
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 302749136323385,
+					"parameters": {
+						"object": "ui_button",
+						"type": "end"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 433327845677739,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-tags",
+							"objectClass": "ui_button",
+							"sid": 663799033224988,
+							"parameters": {
+								"tags": "\"editor_back\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 410000583083894,
+							"parameters": {
+								"layout": "menu"
+							}
+						}
+					],
+					"sid": 473706640207170
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-tags",
+							"objectClass": "ui_button",
+							"sid": 457475367235430,
+							"parameters": {
+								"tags": "\"editor_json\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 777410862441317,
+							"parameters": {
+								"variable": "loadedfromjson",
+								"value": "true"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 738038241034554,
+							"parameters": {
+								"layout": "editor"
+							}
+						}
+					],
+					"sid": 417469014239850
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-tags",
+							"objectClass": "ui_button",
+							"sid": 416953367686210,
+							"parameters": {
+								"tags": "\"editor_playjson\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "editorhall_loadjson_for_play",
+							"sid": 467922982683271
+						}
+					],
+					"sid": 771129456836314
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-tags",
+							"objectClass": "ui_button",
+							"sid": 711561310725111,
+							"parameters": {
+								"tags": "\"editor_newlevel\""
+							}
+						},
+						{
+							"id": "is-on-mobile",
+							"objectClass": "PlatformInfo",
+							"sid": 326033270841331
+						},
+						{
+							"id": "has-tags",
+							"objectClass": "title_text",
+							"sid": 997615409534346,
+							"parameters": {
+								"tags": "\"mobileattention\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "title_text",
+							"sid": 560340364710826,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 195830358095902
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-tags",
+							"objectClass": "ui_button",
+							"sid": 572108196367645,
+							"parameters": {
+								"tags": "\"editor_newlevel\""
+							}
+						},
+						{
+							"id": "is-on-mobile",
+							"objectClass": "PlatformInfo",
+							"sid": 813904313475825,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 864453928428892,
+							"parameters": {
+								"layer": "\"main\"",
+								"interactive": false
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 867378675870073,
+							"parameters": {
+								"layer": "\"levelname\"",
+								"interactive": true
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 389881042880688,
+							"parameters": {
+								"layer": "\"levelname\"",
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 578164108404535
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 657653567740649
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 249796040465536,
+					"parameters": {
+						"layer": "\"main\"",
+						"interactive": true
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 526080692376251,
+					"parameters": {
+						"layer": "\"levelname\"",
+						"interactive": false
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 107757554963243,
+					"parameters": {
+						"layer": "\"levelname\"",
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 455288196706032
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "editorhall_newlevelback",
+					"sid": 510759273879974
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 877489680416355,
+					"parameters": {
+						"layer": "\"main\"",
+						"interactive": true
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 972396984513340,
+					"parameters": {
+						"layer": "\"levelname\"",
+						"interactive": false
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 337176070733853,
+					"parameters": {
+						"layer": "\"levelname\"",
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 971492683076213
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "editorhall_newlevel",
+					"sid": 518718085686270
+				}
+			],
+			"actions": [],
+			"sid": 910732862062584,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-text",
+							"objectClass": "editorhall_levelname",
+							"sid": 380635041398254,
+							"parameters": {
+								"text": "\"\"",
+								"case": "case-insensitive"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 178407065739681,
+							"parameters": {
+								"variable": "level_name",
+								"value": "editorhall_levelname.Text"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 791014095287005,
+							"parameters": {
+								"variable": "loadempty",
+								"value": "true"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 836489577264585,
+							"parameters": {
+								"layout": "editor"
+							}
+						}
+					],
+					"sid": 194172951461807
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-text",
+							"objectClass": "editorhall_levelname",
+							"sid": 798400400645418,
+							"parameters": {
+								"text": "\"\"",
+								"case": "case-insensitive"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-placeholder",
+							"objectClass": "editorhall_levelname",
+							"sid": 971987606385016,
+							"parameters": {
+								"placeholder": "\"i said enter\""
+							}
+						}
+					],
+					"sid": 625873915935779
+				}
+			]
+		},
+		{
+			"functionName": "editorhall_loadjson_for_play",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "click",
+					"objectClass": "FileChooser2",
+					"sid": 665283984471755
+				}
+			],
+			"sid": 629132734145121
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-changed",
+					"objectClass": "FileChooser2",
+					"sid": 543473700781102
+				}
+			],
+			"actions": [
+				{
+					"id": "request-url",
+					"objectClass": "AJAX",
+					"sid": 393166856286383,
+					"parameters": {
+						"tag": "\"loadplay\"",
+						"url": "FileChooser2.FileURLAt(0)"
+					}
+				}
+			],
+			"sid": 221752799835363
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 697127361785115,
+					"parameters": {
+						"tag": "\"loadplay\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "clear",
+					"objectClass": "obj",
+					"sid": 772434338835511,
+					"parameters": {
+						"value": "0"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 391959502734338,
+					"parameters": {
+						"seconds": "0",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "load",
+					"objectClass": "obj",
+					"sid": 489942633926111,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 536216345629449,
+					"parameters": {
+						"seconds": "0",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-item",
+					"objectClass": "lvl_storage",
+					"sid": 710558702227751,
+					"parameters": {
+						"key": "\"temp_lvl\"",
+						"value": "obj.AsJSON"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 130628274061423,
+					"parameters": {
+						"seconds": "0",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 542236705706105,
+					"parameters": {
+						"layout": "user level"
+					}
+				}
+			],
+			"sid": 369412210260373
+		}
+	],
+	"sid": 715376098759748
+}

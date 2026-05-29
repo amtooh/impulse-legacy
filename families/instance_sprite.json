@@ -1,0 +1,24 @@
+{
+	"name": "instance_sprite",
+	"plugin-id": "Sprite",
+	"sid": 170934917528286,
+	"instanceVariables": [
+		{
+			"name": "deletable",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 603418394255267
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"door_edit",
+		"key_spawn_a_edit",
+		"key_spawn_b_edit",
+		"saw_edit",
+		"spike_edit",
+		"player_spawn_edit"
+	]
+}

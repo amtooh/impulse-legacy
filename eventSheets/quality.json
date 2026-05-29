@@ -1,0 +1,134 @@
+{
+	"name": "quality",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "quality",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 120001020976448
+		},
+		{
+			"eventType": "variable",
+			"name": "fpslock",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 644188201099962
+		},
+		{
+			"eventType": "variable",
+			"name": "lowgraph",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 960869156979710
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 759530185928596,
+					"parameters": {
+						"variable": "quality"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-fullscreen-scaling",
+					"objectClass": "System",
+					"sid": 742458549478233,
+					"parameters": {
+						"fullscreen-scaling": "high-quality"
+					}
+				}
+			],
+			"sid": 632308817677481
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 190158644559785,
+					"parameters": {
+						"variable": "quality"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-fullscreen-scaling",
+					"objectClass": "System",
+					"sid": 294098770816249,
+					"parameters": {
+						"fullscreen-scaling": "low-quality"
+					}
+				}
+			],
+			"sid": 961857683365684
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 167563123583116,
+					"parameters": {
+						"variable": "fpslock"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-framerate-mode",
+					"objectClass": "System",
+					"sid": 247023308715090,
+					"parameters": {
+						"framerate-mode": "vsync"
+					}
+				}
+			],
+			"sid": 307567630860856
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 484991696625339,
+					"parameters": {
+						"variable": "fpslock"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-framerate-mode",
+					"objectClass": "System",
+					"sid": 444925337345387,
+					"parameters": {
+						"framerate-mode": "unlimited-frame"
+					}
+				}
+			],
+			"sid": 785951866593443
+		}
+	],
+	"sid": 247279514836547
+}

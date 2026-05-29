@@ -1,0 +1,80 @@
+{
+	"name": "player",
+	"plugin-id": "Sprite",
+	"sid": 974463543208937,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "crouch",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 740296691547098
+		},
+		{
+			"name": "cam_dir",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 239744239408474
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 261979173001474
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 48,
+						"height": 48,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9426629,
+						"collisionPoly": {
+							"points": [
+								0.3541666666666666,
+								0.31249999999999994,
+								0.6249999999999993,
+								0.31249999999999994,
+								0.6249999999999993,
+								0.8541666666666666,
+								0.3541666666666666,
+								0.8541666666666664
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "runparts",
+								"x": 0.4791666666666667,
+								"y": 0.8541666666666666
+							}
+						],
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 325953352149525,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

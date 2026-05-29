@@ -1,0 +1,52 @@
+{
+	"name": "intro",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 588638785931127
+				}
+			],
+			"actions": [
+				{
+					"id": "play-timeline",
+					"objectClass": "TimelineController",
+					"sid": 272573000113873,
+					"parameters": {
+						"timeline": "intro_transition",
+						"tags": "\"intro\""
+					}
+				}
+			],
+			"sid": 930506011321616
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timeline-finished-by-tags",
+					"objectClass": "TimelineController",
+					"sid": 472798844186529,
+					"parameters": {
+						"tags": "\"intro\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 964161724396951,
+					"parameters": {
+						"layout": "menu"
+					}
+				}
+			],
+			"sid": 450484476105603
+		}
+	],
+	"sid": 569954048706914
+}

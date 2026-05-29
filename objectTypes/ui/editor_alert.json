@@ -1,0 +1,26 @@
+{
+	"name": "editor_alert",
+	"plugin-id": "Text",
+	"sid": 254808309230802,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 878517833275216
+		},
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 449492398208825
+		}
+	],
+	"effectTypes": [
+		{
+			"effectId": "skymen_BetterOutline",
+			"name": "BetterOutline"
+		}
+	]
+}

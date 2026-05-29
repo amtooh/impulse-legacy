@@ -1,0 +1,519 @@
+{
+	"name": "counting",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "button"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "music"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "devalert"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "quality"
+		},
+		{
+			"eventType": "variable",
+			"name": "counting_sec",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 376210488177594
+		},
+		{
+			"eventType": "variable",
+			"name": "counting_min",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 867468827842476
+		},
+		{
+			"eventType": "variable",
+			"name": "counting_dts",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 499915863139595
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 778069091117458,
+					"parameters": {
+						"interval-seconds": "1"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 500219985923372,
+					"parameters": {
+						"first-value": "LayoutName",
+						"comparison": 0,
+						"second-value": "\"menu\""
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 610544861753603,
+					"parameters": {
+						"first-value": "LayoutName",
+						"comparison": 0,
+						"second-value": "\"counting_result\""
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 215748647080803,
+					"parameters": {
+						"first-value": "LayoutName",
+						"comparison": 0,
+						"second-value": "\"langselect\""
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 750636330984241,
+					"parameters": {
+						"variable": "counting_sec",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-at-xy",
+					"objectClass": "counting",
+					"sid": 695867470182415,
+					"parameters": {
+						"x": "1",
+						"y": "0",
+						"value": "counting_sec"
+					}
+				}
+			],
+			"sid": 451914354862930
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 160522199139050,
+					"parameters": {
+						"variable": "counting_sec",
+						"comparison": 5,
+						"value": "60"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 641518064050393,
+					"parameters": {
+						"variable": "counting_sec",
+						"value": "0"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 318801200841004,
+					"parameters": {
+						"variable": "counting_min",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-at-xy",
+					"objectClass": "counting",
+					"sid": 737864305353594,
+					"parameters": {
+						"x": "2",
+						"y": "0",
+						"value": "counting_min"
+					}
+				}
+			],
+			"sid": 853279761241215
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 961116332447018
+				}
+			],
+			"actions": [],
+			"sid": 960440907980661,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 518851729831717,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"counting_result\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 469255471501151,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "result_text",
+									"sid": 325334899877629,
+									"parameters": {
+										"tags": "\"result1\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-one-property",
+									"objectClass": "result_text",
+									"sid": 406130511688434,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"result1\"",
+										"property": "offsetY",
+										"end-value": "86",
+										"time": "0.75",
+										"ease": "easeoutcubic",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "result_text",
+									"sid": 499028776910967,
+									"parameters": {
+										"text": "counting_min&\" min \"&counting_sec&\" sec\"&newline&\n\"and fail \"&counting_dts&\" times.\""
+									}
+								}
+							],
+							"sid": 840285553112303
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "result_text",
+									"sid": 419731817576838,
+									"parameters": {
+										"tags": "\"result2\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 228653949308192,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "result_text",
+									"sid": 962446915614043,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"result1\"",
+										"property": "offsetY",
+										"end-value": "160",
+										"time": "0.75",
+										"ease": "easeoutcubic",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 299421014071884
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "ui_button",
+									"sid": 534621559391984,
+									"parameters": {
+										"tags": "\"cnewgame\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 556932491065597,
+									"parameters": {
+										"seconds": "0.9",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "ui_button",
+									"sid": 151173224227289,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"button\"",
+										"property": "offsetY",
+										"end-value": "284",
+										"time": "0.75",
+										"ease": "easeoutcubic",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 935361374109945
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-tags",
+									"objectClass": "ui_button",
+									"sid": 495945951631216,
+									"parameters": {
+										"tags": "\"cmenu\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 319072817628133,
+									"parameters": {
+										"seconds": "1",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "ui_button",
+									"sid": 224725154570127,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"button\"",
+										"property": "offsetY",
+										"end-value": "294",
+										"time": "0.75",
+										"ease": "easeoutcubic",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 274813795936177
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 525410874122696,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"lvl1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "reset-eventvar",
+							"objectClass": "System",
+							"sid": 796909464377328,
+							"parameters": {
+								"variable": "counting_min"
+							}
+						},
+						{
+							"id": "reset-eventvar",
+							"objectClass": "System",
+							"sid": 707140941377292,
+							"parameters": {
+								"variable": "counting_sec"
+							}
+						},
+						{
+							"id": "reset-eventvar",
+							"objectClass": "System",
+							"sid": 709519320559912,
+							"parameters": {
+								"variable": "counting_dts"
+							}
+						}
+					],
+					"sid": 918255076086756
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 247637522030772,
+					"parameters": {
+						"object": "ui_button",
+						"type": "end"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 341014265476245,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-tags",
+							"objectClass": "ui_button",
+							"sid": 199261894800781,
+							"parameters": {
+								"tags": "\"cnewgame\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 877023413367069,
+							"parameters": {
+								"layout": "level 1"
+							}
+						}
+					],
+					"sid": 165786915842594
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-tags",
+							"objectClass": "ui_button",
+							"sid": 707781831112887,
+							"parameters": {
+								"tags": "\"cmenu\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 303137386045228,
+							"parameters": {
+								"layout": "menu"
+							}
+						}
+					],
+					"sid": 897876345052969
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 343645200279325
+				}
+			],
+			"actions": [
+				{
+					"id": "set-image-offset-x",
+					"objectClass": "menu_bg",
+					"sid": 908732393245344,
+					"parameters": {
+						"offset-x": "Self.ImageOffsetX+0.25"
+					}
+				},
+				{
+					"id": "set-image-offset-y",
+					"objectClass": "menu_bg",
+					"sid": 239393263917000,
+					"parameters": {
+						"offset-y": "Self.ImageOffsetX"
+					}
+				},
+				{
+					"id": "set-image-offset-x",
+					"objectClass": "menu_bg2",
+					"sid": 191326181569607,
+					"parameters": {
+						"offset-x": "Self.ImageOffsetX+0.35"
+					}
+				},
+				{
+					"id": "set-image-offset-y",
+					"objectClass": "menu_bg2",
+					"sid": 459239918451863,
+					"parameters": {
+						"offset-y": "Self.ImageOffsetX"
+					}
+				}
+			],
+			"sid": 837380348889919
+		}
+	],
+	"sid": 199254168761588
+}

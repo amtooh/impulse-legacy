@@ -1,0 +1,9 @@
+{
+	"name": "editorhall_newlevel",
+	"plugin-id": "Button",
+	"sid": 310616337121042,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": []
+}

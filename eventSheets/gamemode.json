@@ -1,0 +1,33 @@
+{
+	"name": "gamemode",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "gamemode",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 961534035113394
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 873228653800391,
+					"parameters": {
+						"variable": "gamemode",
+						"comparison": 0,
+						"value": "\"speedrun\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 795624220388022
+		}
+	],
+	"sid": 193029454586699
+}

@@ -1,0 +1,1952 @@
+{
+	"name": "intro_transition",
+	"enabled": true,
+	"interpolationMode": "default",
+	"resultMode": "default",
+	"ease": "default",
+	"pathMode": "line",
+	"resizeMode": "size",
+	"playheadTime": 0.175,
+	"totalTime": 4.5,
+	"stepTime": 0.025,
+	"useStepTime": true,
+	"showingInterpolationModes": false,
+	"showingResultModes": false,
+	"showingEases": false,
+	"showingPathModes": false,
+	"scale": 1.6500000000000006,
+	"loop": false,
+	"pingPong": false,
+	"repeatCount": 1,
+	"startOnLayout": "",
+	"transformWithSceneGraph": true,
+	"ignoreSystemTimescale": true,
+	"tracks": [
+		{
+			"type": "instance-track",
+			"worldInstance": 255,
+			"objectType": "intro_letters",
+			"project": "zp2lnca5okq",
+			"enabled": true,
+			"interpolationMode": "default",
+			"resultMode": "default",
+			"ease": "easeincubic",
+			"pathMode": "default",
+			"resizeMode": "default",
+			"initialVisibility": true,
+			"id": "",
+			"virtualPosition": {
+				"offsetY": 124.63405776504352,
+				"useColor": true,
+				"colorSet": false,
+				"relativeFlags": 2047
+			},
+			"keyframes": [
+				{
+					"time": 0,
+					"tags": "",
+					"enabled": true,
+					"ease": "default",
+					"pathMode": "default"
+				},
+				{
+					"time": 0.7,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeoutcubic",
+					"pathMode": "default"
+				},
+				{
+					"time": 1.875,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeoutcubic",
+					"pathMode": "default"
+				},
+				{
+					"time": 3.825,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeincubic",
+					"pathMode": "default"
+				},
+				{
+					"time": 4.5,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeincubic",
+					"pathMode": "default"
+				}
+			],
+			"propertyTracks": [
+				{
+					"property": "offsetY",
+					"source": {
+						"type": "world-instance",
+						"uid": 255
+					},
+					"enabled": true,
+					"interpolationMode": "default",
+					"resultMode": "default",
+					"ease": "default",
+					"pathMode": "default",
+					"propertyKeyframes": [
+						{
+							"time": 0,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "default",
+							"pathMode": "default",
+							"value": 306,
+							"rValue": 306,
+							"aValue": 534.5,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 0.7,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeoutcubic",
+							"pathMode": "default",
+							"value": 309.129191885453,
+							"rValue": 309.129191885453,
+							"aValue": 537.629191885453,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 1.875,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeoutcubic",
+							"pathMode": "default",
+							"value": 0,
+							"rValue": 0,
+							"aValue": 228.5,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 3.825,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeincubic",
+							"pathMode": "default",
+							"value": 0,
+							"rValue": 0,
+							"aValue": 228.5,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 4.5,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeincubic",
+							"pathMode": "default",
+							"value": 310.2751088488841,
+							"rValue": 310.2751088488841,
+							"aValue": 538.7751088488841,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						}
+					]
+				}
+			],
+			"propertyTracksRoot": {
+				"enabled": true,
+				"interpolationMode": "default",
+				"resultMode": "default",
+				"ease": "default",
+				"pathMode": "default",
+				"resizeMode": "default",
+				"expanded": true,
+				"name": "Property Track Folder",
+				"items": [],
+				"subfolders": []
+			}
+		},
+		{
+			"type": "instance-track",
+			"worldInstance": 256,
+			"objectType": "intro_letters",
+			"project": "zp2lnca5okq",
+			"enabled": true,
+			"interpolationMode": "default",
+			"resultMode": "default",
+			"ease": "default",
+			"pathMode": "default",
+			"resizeMode": "default",
+			"initialVisibility": true,
+			"id": "",
+			"virtualPosition": {
+				"offsetY": 87.4732132240863,
+				"useColor": true,
+				"colorSet": false,
+				"relativeFlags": 2047
+			},
+			"keyframes": [
+				{
+					"time": 0,
+					"tags": "",
+					"enabled": true,
+					"ease": "default",
+					"pathMode": "default"
+				},
+				{
+					"time": 0.625,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeoutcubic",
+					"pathMode": "default"
+				},
+				{
+					"time": 1.75,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeoutcubic",
+					"pathMode": "default"
+				},
+				{
+					"time": 3.75,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeincubic",
+					"pathMode": "default"
+				},
+				{
+					"time": 4.425,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeincubic",
+					"pathMode": "default"
+				}
+			],
+			"propertyTracks": [
+				{
+					"property": "offsetY",
+					"source": {
+						"type": "world-instance",
+						"uid": 256
+					},
+					"enabled": true,
+					"interpolationMode": "default",
+					"resultMode": "default",
+					"ease": "default",
+					"pathMode": "default",
+					"propertyKeyframes": [
+						{
+							"time": 0,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "default",
+							"pathMode": "default",
+							"value": 306,
+							"rValue": 306,
+							"aValue": 550.5,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 0.625,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeoutcubic",
+							"pathMode": "default",
+							"value": 297,
+							"rValue": 297,
+							"aValue": 541.5,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 1.75,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeoutcubic",
+							"pathMode": "default",
+							"value": 0,
+							"rValue": 0,
+							"aValue": 244.5,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 3.75,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeincubic",
+							"pathMode": "default",
+							"value": 0,
+							"rValue": 0,
+							"aValue": 244.5,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 4.425,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeincubic",
+							"pathMode": "default",
+							"value": 303.7440055259477,
+							"rValue": 303.7440055259477,
+							"aValue": 548.2440055259477,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						}
+					]
+				}
+			],
+			"propertyTracksRoot": {
+				"enabled": true,
+				"interpolationMode": "default",
+				"resultMode": "default",
+				"ease": "default",
+				"pathMode": "default",
+				"resizeMode": "default",
+				"expanded": true,
+				"name": "Property Track Folder",
+				"items": [],
+				"subfolders": []
+			}
+		},
+		{
+			"type": "instance-track",
+			"worldInstance": 257,
+			"objectType": "intro_letters",
+			"project": "zp2lnca5okq",
+			"enabled": true,
+			"interpolationMode": "default",
+			"resultMode": "default",
+			"ease": "default",
+			"pathMode": "default",
+			"resizeMode": "default",
+			"initialVisibility": true,
+			"id": "",
+			"virtualPosition": {
+				"offsetY": 67.90546902569234,
+				"useColor": true,
+				"colorSet": false,
+				"relativeFlags": 2047
+			},
+			"keyframes": [
+				{
+					"time": 0,
+					"tags": "",
+					"enabled": true,
+					"ease": "default",
+					"pathMode": "default"
+				},
+				{
+					"time": 0.55,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeoutcubic",
+					"pathMode": "default"
+				},
+				{
+					"time": 1.675,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeoutcubic",
+					"pathMode": "default"
+				},
+				{
+					"time": 3.675,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeincubic",
+					"pathMode": "default"
+				},
+				{
+					"time": 4.35,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeincubic",
+					"pathMode": "default"
+				}
+			],
+			"propertyTracks": [
+				{
+					"property": "offsetY",
+					"source": {
+						"type": "world-instance",
+						"uid": 257
+					},
+					"enabled": true,
+					"interpolationMode": "default",
+					"resultMode": "default",
+					"ease": "default",
+					"pathMode": "default",
+					"propertyKeyframes": [
+						{
+							"time": 0,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "default",
+							"pathMode": "default",
+							"value": 306,
+							"rValue": 306,
+							"aValue": 539.5,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 0.55,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeoutcubic",
+							"pathMode": "default",
+							"value": 305.39713284377524,
+							"rValue": 305.39713284377524,
+							"aValue": 538.8971328437752,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 1.675,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeoutcubic",
+							"pathMode": "default",
+							"value": 0,
+							"rValue": 0,
+							"aValue": 233.5,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 3.675,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeincubic",
+							"pathMode": "default",
+							"value": 0,
+							"rValue": 0,
+							"aValue": 233.5,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 4.35,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeincubic",
+							"pathMode": "default",
+							"value": 305.6100350467867,
+							"rValue": 305.6100350467867,
+							"aValue": 539.1100350467867,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						}
+					]
+				}
+			],
+			"propertyTracksRoot": {
+				"enabled": true,
+				"interpolationMode": "default",
+				"resultMode": "default",
+				"ease": "default",
+				"pathMode": "default",
+				"resizeMode": "default",
+				"expanded": true,
+				"name": "Property Track Folder",
+				"items": [],
+				"subfolders": []
+			}
+		},
+		{
+			"type": "instance-track",
+			"worldInstance": 258,
+			"objectType": "intro_letters",
+			"project": "zp2lnca5okq",
+			"enabled": true,
+			"interpolationMode": "default",
+			"resultMode": "default",
+			"ease": "default",
+			"pathMode": "default",
+			"resizeMode": "default",
+			"initialVisibility": true,
+			"id": "",
+			"virtualPosition": {
+				"offsetY": 59.478251508553925,
+				"useColor": true,
+				"colorSet": false,
+				"relativeFlags": 2047
+			},
+			"keyframes": [
+				{
+					"time": 0,
+					"tags": "",
+					"enabled": true,
+					"ease": "default",
+					"pathMode": "default"
+				},
+				{
+					"time": 0.525,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeoutcubic",
+					"pathMode": "default"
+				},
+				{
+					"time": 1.625,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeoutcubic",
+					"pathMode": "default"
+				},
+				{
+					"time": 3.6,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeincubic",
+					"pathMode": "default"
+				},
+				{
+					"time": 4.275,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeincubic",
+					"pathMode": "default"
+				}
+			],
+			"propertyTracks": [
+				{
+					"property": "offsetY",
+					"source": {
+						"type": "world-instance",
+						"uid": 258
+					},
+					"enabled": true,
+					"interpolationMode": "default",
+					"resultMode": "default",
+					"ease": "default",
+					"pathMode": "default",
+					"propertyKeyframes": [
+						{
+							"time": 0,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "default",
+							"pathMode": "default",
+							"value": 306,
+							"rValue": 306,
+							"aValue": 545.5,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 0.525,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeoutcubic",
+							"pathMode": "default",
+							"value": 307.7296697448239,
+							"rValue": 307.7296697448239,
+							"aValue": 547.2296697448239,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 1.625,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeoutcubic",
+							"pathMode": "default",
+							"value": 0,
+							"rValue": 0,
+							"aValue": 546,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 3.6,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeincubic",
+							"pathMode": "default",
+							"value": 0,
+							"rValue": 0,
+							"aValue": 239.5,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 4.275,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeincubic",
+							"pathMode": "default",
+							"value": 309.3420940884647,
+							"rValue": 309.3420940884647,
+							"aValue": 548.8420940884647,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						}
+					]
+				}
+			],
+			"propertyTracksRoot": {
+				"enabled": true,
+				"interpolationMode": "default",
+				"resultMode": "default",
+				"ease": "default",
+				"pathMode": "default",
+				"resizeMode": "default",
+				"expanded": true,
+				"name": "Property Track Folder",
+				"items": [],
+				"subfolders": []
+			}
+		},
+		{
+			"type": "instance-track",
+			"worldInstance": 259,
+			"objectType": "intro_letters",
+			"project": "zp2lnca5okq",
+			"enabled": true,
+			"interpolationMode": "default",
+			"resultMode": "default",
+			"ease": "default",
+			"pathMode": "default",
+			"resizeMode": "default",
+			"initialVisibility": true,
+			"id": "",
+			"virtualPosition": {
+				"offsetY": 51.02014092415179,
+				"useColor": true,
+				"colorSet": false,
+				"relativeFlags": 2047
+			},
+			"keyframes": [
+				{
+					"time": 0,
+					"tags": "",
+					"enabled": true,
+					"ease": "default",
+					"pathMode": "default"
+				},
+				{
+					"time": 0.5,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeoutcubic",
+					"pathMode": "default"
+				},
+				{
+					"time": 1.575,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeoutcubic",
+					"pathMode": "default"
+				},
+				{
+					"time": 3.55,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeincubic",
+					"pathMode": "default"
+				},
+				{
+					"time": 4.225,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeincubic",
+					"pathMode": "default"
+				}
+			],
+			"propertyTracks": [
+				{
+					"property": "offsetY",
+					"source": {
+						"type": "world-instance",
+						"uid": 259
+					},
+					"enabled": true,
+					"interpolationMode": "default",
+					"resultMode": "default",
+					"ease": "default",
+					"pathMode": "default",
+					"propertyKeyframes": [
+						{
+							"time": 0,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "default",
+							"pathMode": "default",
+							"value": 306,
+							"rValue": 306,
+							"aValue": 545.5,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 0.5,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeoutcubic",
+							"pathMode": "default",
+							"value": 307.2631623646141,
+							"rValue": 307.2631623646141,
+							"aValue": 546.7631623646141,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 1.575,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeoutcubic",
+							"pathMode": "default",
+							"value": 0,
+							"rValue": 0,
+							"aValue": 546,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 3.55,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeincubic",
+							"pathMode": "default",
+							"value": 0,
+							"rValue": 0,
+							"aValue": 239.5,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 4.225,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeincubic",
+							"pathMode": "default",
+							"value": 305.6100350467867,
+							"rValue": 305.6100350467867,
+							"aValue": 545.1100350467867,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						}
+					]
+				}
+			],
+			"propertyTracksRoot": {
+				"enabled": true,
+				"interpolationMode": "default",
+				"resultMode": "default",
+				"ease": "default",
+				"pathMode": "default",
+				"resizeMode": "default",
+				"expanded": true,
+				"name": "Property Track Folder",
+				"items": [],
+				"subfolders": []
+			}
+		},
+		{
+			"type": "instance-track",
+			"worldInstance": 260,
+			"objectType": "intro_letters",
+			"project": "zp2lnca5okq",
+			"enabled": true,
+			"interpolationMode": "default",
+			"resultMode": "default",
+			"ease": "default",
+			"pathMode": "default",
+			"resizeMode": "default",
+			"initialVisibility": true,
+			"id": "",
+			"virtualPosition": {
+				"offsetY": 36.19455723262615,
+				"useColor": true,
+				"colorSet": false,
+				"relativeFlags": 2047
+			},
+			"keyframes": [
+				{
+					"time": 0,
+					"tags": "",
+					"enabled": true,
+					"ease": "default",
+					"pathMode": "default"
+				},
+				{
+					"time": 0.425,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeoutcubic",
+					"pathMode": "default"
+				},
+				{
+					"time": 1.5,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeoutcubic",
+					"pathMode": "default"
+				},
+				{
+					"time": 3.475,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeincubic",
+					"pathMode": "default"
+				},
+				{
+					"time": 4.175,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeincubic",
+					"pathMode": "default"
+				}
+			],
+			"propertyTracks": [
+				{
+					"property": "offsetY",
+					"source": {
+						"type": "world-instance",
+						"uid": 260
+					},
+					"enabled": true,
+					"interpolationMode": "default",
+					"resultMode": "default",
+					"ease": "default",
+					"pathMode": "default",
+					"propertyKeyframes": [
+						{
+							"time": 0,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "default",
+							"pathMode": "default",
+							"value": 306,
+							"rValue": 306,
+							"aValue": 531.5,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 0.425,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeoutcubic",
+							"pathMode": "default",
+							"value": 306.33014760419474,
+							"rValue": 306.33014760419474,
+							"aValue": 531.8301476041947,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 1.5,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeoutcubic",
+							"pathMode": "default",
+							"value": 0,
+							"rValue": 0,
+							"aValue": 225.5,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 3.475,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeincubic",
+							"pathMode": "default",
+							"value": 0,
+							"rValue": 0,
+							"aValue": 225.5,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 4.175,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeincubic",
+							"pathMode": "default",
+							"value": 306.5430498072062,
+							"rValue": 306.5430498072062,
+							"aValue": 532.0430498072062,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						}
+					]
+				}
+			],
+			"propertyTracksRoot": {
+				"enabled": true,
+				"interpolationMode": "default",
+				"resultMode": "default",
+				"ease": "default",
+				"pathMode": "default",
+				"resizeMode": "default",
+				"expanded": true,
+				"name": "Property Track Folder",
+				"items": [],
+				"subfolders": []
+			}
+		},
+		{
+			"type": "instance-track",
+			"worldInstance": 261,
+			"objectType": "intro_letters",
+			"project": "zp2lnca5okq",
+			"enabled": true,
+			"interpolationMode": "default",
+			"resultMode": "default",
+			"ease": "default",
+			"pathMode": "default",
+			"resizeMode": "default",
+			"initialVisibility": true,
+			"id": "",
+			"virtualPosition": {
+				"offsetY": 30.806859292996222,
+				"useColor": true,
+				"colorSet": false,
+				"relativeFlags": 2047
+			},
+			"keyframes": [
+				{
+					"time": 0,
+					"tags": "",
+					"enabled": true,
+					"ease": "default",
+					"pathMode": "default"
+				},
+				{
+					"time": 0.35,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeoutcubic",
+					"pathMode": "default"
+				},
+				{
+					"time": 1.5,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeoutcubic",
+					"pathMode": "default"
+				},
+				{
+					"time": 3.4,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeincubic",
+					"pathMode": "default"
+				},
+				{
+					"time": 4.125,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeincubic",
+					"pathMode": "default"
+				}
+			],
+			"propertyTracks": [
+				{
+					"property": "offsetY",
+					"source": {
+						"type": "world-instance",
+						"uid": 261
+					},
+					"enabled": true,
+					"interpolationMode": "default",
+					"resultMode": "default",
+					"ease": "default",
+					"pathMode": "default",
+					"propertyKeyframes": [
+						{
+							"time": 0,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "default",
+							"pathMode": "default",
+							"value": 306,
+							"rValue": 306,
+							"aValue": 561.5,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 0.35,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeoutcubic",
+							"pathMode": "default",
+							"value": 305.86364022398504,
+							"rValue": 305.86364022398504,
+							"aValue": 561.363640223985,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 1.5,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeoutcubic",
+							"pathMode": "default",
+							"value": 0,
+							"rValue": 0,
+							"aValue": 255.5,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 3.4,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeincubic",
+							"pathMode": "default",
+							"value": 0,
+							"rValue": 0,
+							"aValue": 255.5,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 4.125,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeincubic",
+							"pathMode": "default",
+							"value": 305.6100350467867,
+							"rValue": 305.6100350467867,
+							"aValue": 561.1100350467867,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						}
+					]
+				}
+			],
+			"propertyTracksRoot": {
+				"enabled": true,
+				"interpolationMode": "default",
+				"resultMode": "default",
+				"ease": "default",
+				"pathMode": "default",
+				"resizeMode": "default",
+				"expanded": true,
+				"name": "Property Track Folder",
+				"items": [],
+				"subfolders": []
+			}
+		},
+		{
+			"type": "instance-track",
+			"worldInstance": 262,
+			"objectType": "intro_letters",
+			"project": "zp2lnca5okq",
+			"enabled": true,
+			"interpolationMode": "default",
+			"resultMode": "default",
+			"ease": "default",
+			"pathMode": "default",
+			"resizeMode": "default",
+			"initialVisibility": true,
+			"id": "",
+			"virtualPosition": {
+				"offsetY": 20.49580733245113,
+				"useColor": true,
+				"colorSet": false,
+				"relativeFlags": 2047
+			},
+			"keyframes": [
+				{
+					"time": 0,
+					"tags": "",
+					"enabled": true,
+					"ease": "default",
+					"pathMode": "default"
+				},
+				{
+					"time": 0.3,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeoutcubic",
+					"pathMode": "default"
+				},
+				{
+					"time": 1.4,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeoutcubic",
+					"pathMode": "default"
+				},
+				{
+					"time": 3.35,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeincubic",
+					"pathMode": "default"
+				},
+				{
+					"time": 4.075,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeincubic",
+					"pathMode": "default"
+				}
+			],
+			"propertyTracks": [
+				{
+					"property": "offsetY",
+					"source": {
+						"type": "world-instance",
+						"uid": 262
+					},
+					"enabled": true,
+					"interpolationMode": "default",
+					"resultMode": "default",
+					"ease": "default",
+					"pathMode": "default",
+					"propertyKeyframes": [
+						{
+							"time": 0,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "default",
+							"pathMode": "default",
+							"value": 306,
+							"rValue": 306,
+							"aValue": 556.5,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 0.3,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeoutcubic",
+							"pathMode": "default",
+							"value": 307.2631623646141,
+							"rValue": 307.2631623646141,
+							"aValue": 557.7631623646141,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 1.4,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeoutcubic",
+							"pathMode": "default",
+							"value": 0,
+							"rValue": 0,
+							"aValue": 250.5,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 3.35,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeincubic",
+							"pathMode": "default",
+							"value": 0,
+							"rValue": 0,
+							"aValue": 250.5,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 4.075,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeincubic",
+							"pathMode": "default",
+							"value": 307.009557187416,
+							"rValue": 307.009557187416,
+							"aValue": 557.509557187416,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						}
+					]
+				}
+			],
+			"propertyTracksRoot": {
+				"enabled": true,
+				"interpolationMode": "default",
+				"resultMode": "default",
+				"ease": "default",
+				"pathMode": "default",
+				"resizeMode": "default",
+				"expanded": true,
+				"name": "Property Track Folder",
+				"items": [],
+				"subfolders": []
+			}
+		},
+		{
+			"type": "instance-track",
+			"worldInstance": 263,
+			"objectType": "intro_letters",
+			"project": "zp2lnca5okq",
+			"enabled": true,
+			"interpolationMode": "default",
+			"resultMode": "default",
+			"ease": "default",
+			"pathMode": "default",
+			"resizeMode": "default",
+			"initialVisibility": true,
+			"id": "",
+			"virtualPosition": {
+				"offsetY": 16.84740335035035,
+				"useColor": true,
+				"colorSet": false,
+				"relativeFlags": 2047
+			},
+			"keyframes": [
+				{
+					"time": 0,
+					"tags": "",
+					"enabled": true,
+					"ease": "default",
+					"pathMode": "default"
+				},
+				{
+					"time": 0.25,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeoutcubic",
+					"pathMode": "default"
+				},
+				{
+					"time": 1.375,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeoutcubic",
+					"pathMode": "default"
+				},
+				{
+					"time": 3.3,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeincubic",
+					"pathMode": "default"
+				},
+				{
+					"time": 4.025,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeincubic",
+					"pathMode": "default"
+				}
+			],
+			"propertyTracks": [
+				{
+					"property": "offsetY",
+					"source": {
+						"type": "world-instance",
+						"uid": 263
+					},
+					"enabled": true,
+					"interpolationMode": "default",
+					"resultMode": "default",
+					"ease": "default",
+					"pathMode": "default",
+					"propertyKeyframes": [
+						{
+							"time": 0,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "default",
+							"pathMode": "default",
+							"value": 306,
+							"rValue": 306,
+							"aValue": 556.5,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 0.25,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeoutcubic",
+							"pathMode": "default",
+							"value": 307.2631623646141,
+							"rValue": 307.2631623646141,
+							"aValue": 557.7631623646141,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 1.375,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeoutcubic",
+							"pathMode": "default",
+							"value": 0,
+							"rValue": 0,
+							"aValue": 250.5,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 3.3,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeincubic",
+							"pathMode": "default",
+							"value": 0,
+							"rValue": 0,
+							"aValue": 250.5,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 4.025,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeincubic",
+							"pathMode": "default",
+							"value": 305.14352766657703,
+							"rValue": 305.14352766657703,
+							"aValue": 555.643527666577,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						}
+					]
+				}
+			],
+			"propertyTracksRoot": {
+				"enabled": true,
+				"interpolationMode": "default",
+				"resultMode": "default",
+				"ease": "default",
+				"pathMode": "default",
+				"resizeMode": "default",
+				"expanded": true,
+				"name": "Property Track Folder",
+				"items": [],
+				"subfolders": []
+			}
+		},
+		{
+			"type": "instance-track",
+			"worldInstance": 264,
+			"objectType": "intro_letters",
+			"project": "zp2lnca5okq",
+			"enabled": true,
+			"interpolationMode": "default",
+			"resultMode": "default",
+			"ease": "default",
+			"pathMode": "default",
+			"resizeMode": "default",
+			"initialVisibility": true,
+			"id": "",
+			"virtualPosition": {
+				"offsetY": 13.083316827719187,
+				"useColor": true,
+				"colorSet": false,
+				"relativeFlags": 2047
+			},
+			"keyframes": [
+				{
+					"time": 0,
+					"tags": "",
+					"enabled": true,
+					"ease": "default",
+					"pathMode": "default"
+				},
+				{
+					"time": 0.175,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeoutcubic",
+					"pathMode": "default"
+				},
+				{
+					"time": 1.35,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeoutcubic",
+					"pathMode": "default"
+				},
+				{
+					"time": 3.25,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeincubic",
+					"pathMode": "default"
+				},
+				{
+					"time": 3.975,
+					"tags": "",
+					"enabled": true,
+					"ease": "easeincubic",
+					"pathMode": "default"
+				}
+			],
+			"propertyTracks": [
+				{
+					"property": "offsetY",
+					"source": {
+						"type": "world-instance",
+						"uid": 264
+					},
+					"enabled": true,
+					"interpolationMode": "default",
+					"resultMode": "default",
+					"ease": "default",
+					"pathMode": "default",
+					"propertyKeyframes": [
+						{
+							"time": 0,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "default",
+							"pathMode": "default",
+							"value": 306,
+							"rValue": 306,
+							"aValue": 547.5,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 0.175,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeoutcubic",
+							"pathMode": "default",
+							"value": 306.33014760419474,
+							"rValue": 306.33014760419474,
+							"aValue": 547.8301476041947,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 1.35,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeoutcubic",
+							"pathMode": "default",
+							"value": 0,
+							"rValue": 0,
+							"aValue": 241.5,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 3.25,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeincubic",
+							"pathMode": "default",
+							"value": 0,
+							"rValue": 0,
+							"aValue": 241.5,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						},
+						{
+							"time": 3.975,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "easeincubic",
+							"pathMode": "default",
+							"value": 305.6987227648384,
+							"rValue": 305.6987227648384,
+							"aValue": 547.1987227648384,
+							"addons": [
+								{
+									"id": "cubic-bezier",
+									"data": {
+										"startAnchor": null,
+										"startEnable": false,
+										"endAnchor": null,
+										"endEnable": false
+									}
+								}
+							]
+						}
+					]
+				}
+			],
+			"propertyTracksRoot": {
+				"enabled": true,
+				"interpolationMode": "default",
+				"resultMode": "default",
+				"ease": "default",
+				"pathMode": "default",
+				"resizeMode": "default",
+				"expanded": true,
+				"name": "Property Track Folder",
+				"items": [],
+				"subfolders": []
+			}
+		}
+	],
+	"tracksRoot": {
+		"enabled": true,
+		"interpolationMode": "default",
+		"resultMode": "default",
+		"ease": "default",
+		"pathMode": "default",
+		"resizeMode": "default",
+		"expanded": true,
+		"name": "Track Folder",
+		"items": [],
+		"subfolders": []
+	},
+	"nestedTimelinesRoot": {
+		"enabled": true,
+		"interpolationMode": "default",
+		"resultMode": "default",
+		"ease": "default",
+		"pathMode": "default",
+		"resizeMode": "default",
+		"expanded": true,
+		"name": "Timelines",
+		"items": [],
+		"subfolders": []
+	},
+	"nestedData": {},
+	"transitionsData": []
+}

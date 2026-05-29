@@ -1,0 +1,9 @@
+{
+	"name": "editorhall_levelname",
+	"plugin-id": "TextBox",
+	"sid": 807170156111143,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": []
+}

@@ -1,0 +1,289 @@
+{
+	"name": "music",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "music_transition_speed",
+			"type": "number",
+			"initialValue": "0.6",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 282581971026801
+		},
+		{
+			"eventType": "variable",
+			"name": "mus",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 465550538340274
+		},
+		{
+			"eventType": "variable",
+			"name": "sfx",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 251115982626927
+		},
+		{
+			"eventType": "block",
+			"conditions": [],
+			"actions": [],
+			"sid": 362858480485883,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 731205968694335,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 781369705704106,
+									"parameters": {
+										"tag": "\"menuloop\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 181670120568621,
+									"parameters": {
+										"audio-file": "menu_loop",
+										"loop": "looping",
+										"volume": "-100",
+										"stereo-pan": "0",
+										"tag-optional": "\"menuloop\""
+									}
+								}
+							],
+							"sid": 884927125127884
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-tag-playing",
+									"objectClass": "Audio",
+									"sid": 121130949057749,
+									"parameters": {
+										"tag": "\"levelloop\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 615666253058195,
+									"parameters": {
+										"audio-file": "level_loop",
+										"loop": "looping",
+										"volume": "-100",
+										"stereo-pan": "0",
+										"tag-optional": "\"levelloop\""
+									}
+								}
+							],
+							"sid": 770458194939635
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 285103920890781,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"menu\""
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 647737199084535,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"counting_result\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 946789054693794,
+									"parameters": {
+										"tag": "\"menuloop\"",
+										"db": "mus-70",
+										"duration": "music_transition_speed",
+										"ending": "keep-playing"
+									}
+								},
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 212608031113551,
+									"parameters": {
+										"tag": "\"levelloop\"",
+										"db": "-100",
+										"duration": "music_transition_speed",
+										"ending": "keep-playing"
+									}
+								}
+							],
+							"sid": 648920583002087,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 574521733377787,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"menu\""
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 384170820254129,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"counting_result\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 455298664343993,
+									"parameters": {
+										"tag": "\"menuloop\"",
+										"db": "-100",
+										"duration": "music_transition_speed",
+										"ending": "keep-playing"
+									}
+								},
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 942794951736790,
+									"parameters": {
+										"tag": "\"levelloop\"",
+										"db": "mus-70",
+										"duration": "music_transition_speed",
+										"ending": "keep-playing"
+									}
+								}
+							],
+							"sid": 714861369726473
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 723107059180992
+				}
+			],
+			"actions": [
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 736249213415370,
+					"parameters": {
+						"tag": "\"player_landed_sound\"",
+						"db": "sfx-70"
+					}
+				},
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 184571842637336,
+					"parameters": {
+						"tag": "\"player_jump_sound\"",
+						"db": "sfx-70"
+					}
+				},
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 674495933507857,
+					"parameters": {
+						"tag": "\"player_run_sound\"",
+						"db": "sfx-70"
+					}
+				},
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 354253562008540,
+					"parameters": {
+						"tag": "\"spawn\"",
+						"db": "sfx-70"
+					}
+				},
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 191890630570544,
+					"parameters": {
+						"tag": "\"death\"",
+						"db": "sfx-70"
+					}
+				},
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 438437003003746,
+					"parameters": {
+						"tag": "\"mouse_over_button\"",
+						"db": "sfx-70"
+					}
+				},
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 552173785177183,
+					"parameters": {
+						"tag": "\"key\"",
+						"db": "sfx-70"
+					}
+				}
+			],
+			"sid": 289860647197793
+		}
+	],
+	"sid": 505569761726753
+}

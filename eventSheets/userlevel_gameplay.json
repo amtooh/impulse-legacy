@@ -1,0 +1,4172 @@
+{
+	"name": "userlevel_gameplay",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "levelready",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 947168489132012
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "userlevel_gameplay",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "leveload",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 974738574479389
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 569394993014783,
+									"parameters": {
+										"variable": "levelready",
+										"value": "false"
+									}
+								},
+								{
+									"id": "get-item",
+									"objectClass": "lvl_storage",
+									"sid": 837270083450560,
+									"parameters": {
+										"key": "\"temp_lvl\""
+									}
+								}
+							],
+							"sid": 630499403475352,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-mobile",
+											"objectClass": "PlatformInfo",
+											"sid": 665013901190417
+										}
+									],
+									"actions": [
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 258095086199209,
+											"parameters": {
+												"layer": "\"mobui\"",
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 415053938960884,
+											"parameters": {
+												"layer": "\"mobui\"",
+												"interactive": true
+											}
+										}
+									],
+									"sid": 445258619700089
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-mobile",
+											"objectClass": "PlatformInfo",
+											"sid": 340993212770490,
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 437229387363314,
+											"parameters": {
+												"layer": "\"mobui\"",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-interactive",
+											"objectClass": "System",
+											"sid": 138508723041313,
+											"parameters": {
+												"layer": "\"mobui\"",
+												"interactive": false
+											}
+										}
+									],
+									"sid": 155985905395876
+								}
+							]
+						},
+						{
+							"functionName": "load_user_level_from_array",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": true,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 211706487033201,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "repeat",
+											"objectClass": "System",
+											"sid": 530042583395542,
+											"parameters": {
+												"count": "obj.Height"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 825369277727079,
+									"children": [
+										{
+											"eventType": "variable",
+											"name": "objName",
+											"type": "string",
+											"initialValue": "",
+											"comment": "",
+											"isStatic": true,
+											"isConstant": false,
+											"sid": 511414311980031
+										},
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 636319694622126,
+													"parameters": {
+														"variable": "objName",
+														"value": "obj.At(0, loopindex)"
+													}
+												},
+												{
+													"id": "create-object-by-name",
+													"objectClass": "System",
+													"sid": 760833028680728,
+													"parameters": {
+														"object-name": "obj.At(0, loopindex)",
+														"layer": "\"ground\"",
+														"x": "obj.At(1, loopindex)",
+														"y": "obj.At(2, loopindex)",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												}
+											],
+											"sid": 367026484599025,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 883113680285971,
+															"parameters": {
+																"first-value": "objName",
+																"comparison": 0,
+																"second-value": "\"spike\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "rotate-clockwise",
+															"objectClass": "spike",
+															"sid": 678225968540034,
+															"parameters": {
+																"degrees": "obj.At(5, loopindex)"
+															}
+														},
+														{
+															"id": "move-to-layer",
+															"objectClass": "spike",
+															"sid": 530385194126252,
+															"parameters": {
+																"layer": "\"obstacles\""
+															}
+														}
+													],
+													"sid": 223993966716400
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 862520836226610,
+															"parameters": {
+																"first-value": "objName",
+																"comparison": 0,
+																"second-value": "\"saw\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "move-to-layer",
+															"objectClass": "saw",
+															"sid": 416541754510436,
+															"parameters": {
+																"layer": "\"obstacles\""
+															}
+														}
+													],
+													"sid": 553202989131789
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 732150322252237,
+															"parameters": {
+																"first-value": "objName",
+																"comparison": 0,
+																"second-value": "\"ground\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-size",
+															"objectClass": "ground",
+															"sid": 556609679330777,
+															"parameters": {
+																"width": "obj.At(3, loopindex)",
+																"height": "obj.At(4, loopindex)"
+															}
+														},
+														{
+															"id": "move-to-layer",
+															"objectClass": "ground",
+															"sid": 142818821234369,
+															"parameters": {
+																"layer": "\"ground\""
+															}
+														}
+													],
+													"sid": 922942415344452
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 354955384897590,
+															"parameters": {
+																"first-value": "objName",
+																"comparison": 0,
+																"second-value": "\"acid\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-size",
+															"objectClass": "acid",
+															"sid": 369090024787015,
+															"parameters": {
+																"width": "obj.At(3, loopindex)",
+																"height": "obj.At(4, loopindex)"
+															}
+														},
+														{
+															"id": "move-to-layer",
+															"objectClass": "acid",
+															"sid": 497552925078741,
+															"parameters": {
+																"layer": "\"acid\""
+															}
+														}
+													],
+													"sid": 610858406500428
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 899304773462579,
+															"parameters": {
+																"first-value": "objName",
+																"comparison": 0,
+																"second-value": "\"door\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "move-to-layer",
+															"objectClass": "door",
+															"sid": 858614277312348,
+															"parameters": {
+																"layer": "\"door\""
+															}
+														}
+													],
+													"sid": 572827729237680
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 927025749078843,
+															"parameters": {
+																"first-value": "objName",
+																"comparison": 0,
+																"second-value": "\"player_spawn\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "move-to-layer",
+															"objectClass": "player_spawn",
+															"sid": 414150743171212,
+															"parameters": {
+																"layer": "\"dev\""
+															}
+														}
+													],
+													"sid": 695415710771343
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-item-get",
+									"objectClass": "lvl_storage",
+									"sid": 418769530103536,
+									"parameters": {
+										"key": "\"temp_lvl\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "load",
+									"objectClass": "obj",
+									"sid": 992085196204706,
+									"parameters": {
+										"json": "lvl_storage.ItemValue"
+									}
+								},
+								{
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 359966459676628
+								},
+								{
+									"callFunction": "load_user_level_from_array",
+									"sid": 625784815195991
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 247772461786840,
+									"parameters": {
+										"seconds": "0.15",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 813760482134164,
+									"parameters": {
+										"variable": "levelready",
+										"value": "true"
+									}
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "player_spawn",
+									"sid": 345275349235206,
+									"parameters": {
+										"object": "cam",
+										"layer": "\"dev\"",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"default\""
+									}
+								}
+							],
+							"sid": 191781676988124
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 193897542776827,
+									"parameters": {
+										"variable": "levelready"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-opacity",
+									"objectClass": "System",
+									"sid": 832555368205264,
+									"parameters": {
+										"layer": "\"loading\"",
+										"opacity": "lerp(LayerOpacity(\"loading\"), 0, 0.2 * 60 * dt)"
+									}
+								}
+							],
+							"sid": 166482285757475
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 403269511320785,
+									"parameters": {
+										"variable": "levelready"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-opacity",
+									"objectClass": "System",
+									"sid": 378703804763566,
+									"parameters": {
+										"layer": "\"loading\"",
+										"opacity": "100"
+									}
+								}
+							],
+							"sid": 247825965872075
+						}
+					],
+					"sid": 669552256608291
+				},
+				{
+					"eventType": "variable",
+					"name": "player_exist2",
+					"type": "boolean",
+					"initialValue": "false",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 154992916719994
+				},
+				{
+					"eventType": "variable",
+					"name": "key_a2",
+					"type": "boolean",
+					"initialValue": "false",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 650789406311493
+				},
+				{
+					"eventType": "variable",
+					"name": "key_b2",
+					"type": "boolean",
+					"initialValue": "false",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 644125262637134
+				},
+				{
+					"eventType": "variable",
+					"name": "transition2",
+					"type": "boolean",
+					"initialValue": "false",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 276528535760755
+				},
+				{
+					"eventType": "variable",
+					"name": "pause2",
+					"type": "boolean",
+					"initialValue": "false",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 570791750117371
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "player2",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "p init2",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"functionName": "player_spawn2",
+									"functionDescription": "",
+									"functionCategory": "",
+									"functionReturnType": "none",
+									"functionCopyPicked": false,
+									"functionIsAsync": false,
+									"functionParameters": [
+										{
+											"name": "particles",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"sid": 618718754430720
+										}
+									],
+									"eventType": "function-block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "spawn-another-object",
+											"objectClass": "player_spawn",
+											"sid": 143161721563428,
+											"parameters": {
+												"object": "player",
+												"layer": "\"dev\"",
+												"image-point": "0",
+												"create-hierarchy": false,
+												"template-name": "\"default\""
+											}
+										},
+										{
+											"id": "spawn-another-object",
+											"objectClass": "player_spawn",
+											"sid": 923588402934463,
+											"parameters": {
+												"object": "player_skin",
+												"layer": "\"player\"",
+												"image-point": "0",
+												"create-hierarchy": false,
+												"template-name": "\"default\""
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 526444314940278,
+											"parameters": {
+												"variable": "player_exist",
+												"value": "true"
+											}
+										},
+										{
+											"id": "destroy",
+											"objectClass": "player_death_pos",
+											"sid": 739188068431828
+										},
+										{
+											"id": "remove-all-effects",
+											"objectClass": "Audio",
+											"sid": 693060560479229,
+											"parameters": {
+												"tag": "\"levelloop\""
+											}
+										}
+									],
+									"sid": 727943934365025,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 889887366016250,
+													"parameters": {
+														"variable": "particles",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "spawn-another-object",
+													"objectClass": "player_spawn",
+													"sid": 383702128726512,
+													"parameters": {
+														"object": "spawn_effect_0",
+														"layer": "\"foreword\"",
+														"image-point": "0",
+														"create-hierarchy": false,
+														"template-name": "\"default\""
+													}
+												},
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 506265436310077,
+													"parameters": {
+														"audio-file": "effect_0",
+														"loop": "not-looping",
+														"volume": "0",
+														"stereo-pan": "0",
+														"tag-optional": "\"spawn\""
+													}
+												}
+											],
+											"sid": 799342965843867
+										},
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "set-playback-rate",
+													"objectClass": "Audio",
+													"sid": 908731506801960,
+													"parameters": {
+														"tag": "\"spawn\"",
+														"playback-rate": "random(0.8, 1.2)"
+													}
+												}
+											],
+											"sid": 201869797999508
+										},
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "spawn-another-object",
+													"objectClass": "key_spawn_a",
+													"sid": 369084012957724,
+													"parameters": {
+														"object": "key_a",
+														"layer": "\"keys\"",
+														"image-point": "0",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 838346643605291,
+													"parameters": {
+														"variable": "key_a",
+														"value": "false"
+													}
+												},
+												{
+													"id": "spawn-another-object",
+													"objectClass": "key_spawn_b",
+													"sid": 181777936587009,
+													"parameters": {
+														"object": "key_b",
+														"layer": "\"keys\"",
+														"image-point": "0",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 826948599668360,
+													"parameters": {
+														"variable": "key_b",
+														"value": "false"
+													}
+												}
+											],
+											"sid": 902600816104013
+										}
+									]
+								},
+								{
+									"functionName": "player_death2",
+									"functionDescription": "",
+									"functionCategory": "",
+									"functionReturnType": "none",
+									"functionCopyPicked": false,
+									"functionIsAsync": false,
+									"functionParameters": [
+										{
+											"name": "wait",
+											"type": "number",
+											"initialValue": "0.5",
+											"comment": "",
+											"sid": 327371127870345
+										},
+										{
+											"name": "particles",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"sid": 518410822147042
+										}
+									],
+									"eventType": "function-block",
+									"conditions": [],
+									"actions": [],
+									"sid": 569917089810589,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 378063555961620,
+													"parameters": {
+														"variable": "particles",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "spawn-another-object",
+													"objectClass": "player",
+													"sid": 545864645069268,
+													"parameters": {
+														"object": "spawn_effect_0",
+														"layer": "\"foreword\"",
+														"image-point": "0",
+														"create-hierarchy": false,
+														"template-name": "\"default\""
+													}
+												}
+											],
+											"sid": 445518855297070,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 766604000086185,
+															"parameters": {
+																"audio-file": "effect_0",
+																"loop": "not-looping",
+																"volume": "0",
+																"stereo-pan": "0",
+																"tag-optional": "\"death\""
+															}
+														}
+													],
+													"sid": 819635777592868
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 112695103652876,
+													"parameters": {
+														"variable": "particles",
+														"comparison": 0,
+														"value": "2"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "spawn-another-object",
+													"objectClass": "player",
+													"sid": 484890693025641,
+													"parameters": {
+														"object": "acid_particles",
+														"layer": "\"acid_particles\"",
+														"image-point": "0",
+														"create-hierarchy": false,
+														"template-name": "\"default\""
+													}
+												},
+												{
+													"id": "set-angle",
+													"objectClass": "acid_particles",
+													"sid": 941741796074946,
+													"parameters": {
+														"angle": "270"
+													}
+												}
+											],
+											"sid": 815673229872398,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 492973043300692,
+															"parameters": {
+																"audio-file": "effect_1",
+																"loop": "not-looping",
+																"volume": "-12",
+																"stereo-pan": "0",
+																"tag-optional": "\"death\""
+															}
+														},
+														{
+															"id": "add-filter-effect",
+															"objectClass": "Audio",
+															"sid": 217373005721606,
+															"parameters": {
+																"tag": "\"levelloop\"",
+																"type": "low-pass",
+																"frequency": "350",
+																"detune": "0",
+																"q": "1",
+																"gain": "0",
+																"mix": "100"
+															}
+														}
+													],
+													"sid": 739022632108233
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 935432798645203,
+													"parameters": {
+														"variable": "particles",
+														"comparison": 0,
+														"value": "3"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "spawn-another-object",
+													"objectClass": "player",
+													"sid": 568292902201270,
+													"parameters": {
+														"object": "player_particles",
+														"layer": "\"foreword\"",
+														"image-point": "0",
+														"create-hierarchy": false,
+														"template-name": "\"red\""
+													}
+												},
+												{
+													"id": "spawn-another-object",
+													"objectClass": "player",
+													"sid": 648226439612439,
+													"parameters": {
+														"object": "player_particles",
+														"layer": "\"foreword\"",
+														"image-point": "0",
+														"create-hierarchy": false,
+														"template-name": "\"green\""
+													}
+												},
+												{
+													"id": "spawn-another-object",
+													"objectClass": "player",
+													"sid": 662406312789088,
+													"parameters": {
+														"object": "player_particles",
+														"layer": "\"foreword\"",
+														"image-point": "0",
+														"create-hierarchy": false,
+														"template-name": "\"yellow\""
+													}
+												},
+												{
+													"id": "spawn-another-object",
+													"objectClass": "player",
+													"sid": 291313950287168,
+													"parameters": {
+														"object": "player_particles",
+														"layer": "\"foreword\"",
+														"image-point": "0",
+														"create-hierarchy": false,
+														"template-name": "\"purple\""
+													}
+												},
+												{
+													"id": "spawn-another-object",
+													"objectClass": "player",
+													"sid": 960204034218669,
+													"parameters": {
+														"object": "player_particles",
+														"layer": "\"foreword\"",
+														"image-point": "0",
+														"create-hierarchy": false,
+														"template-name": "\"blue\""
+													}
+												},
+												{
+													"id": "spawn-another-object",
+													"objectClass": "player",
+													"sid": 595272127004905,
+													"parameters": {
+														"object": "player_particles",
+														"layer": "\"foreword\"",
+														"image-point": "0",
+														"create-hierarchy": false,
+														"template-name": "\"orange\""
+													}
+												}
+											],
+											"sid": 373593493273728,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 213290181242659,
+															"parameters": {
+																"audio-file": "effect_2",
+																"loop": "not-looping",
+																"volume": "-10",
+																"stereo-pan": "0",
+																"tag-optional": "\"death\""
+															}
+														}
+													],
+													"sid": 920294780548742
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "set-playback-rate",
+													"objectClass": "Audio",
+													"sid": 242783152921873,
+													"parameters": {
+														"tag": "\"death\"",
+														"playback-rate": "random(0.8, 1.2)"
+													}
+												}
+											],
+											"sid": 997847038109426
+										},
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "spawn-another-object",
+													"objectClass": "player",
+													"sid": 582176458080256,
+													"parameters": {
+														"object": "player_death_pos",
+														"layer": "\"dev\"",
+														"image-point": "0",
+														"create-hierarchy": false,
+														"template-name": "\"default\""
+													}
+												},
+												{
+													"id": "destroy",
+													"objectClass": "player",
+													"sid": 500783363161889
+												},
+												{
+													"id": "add-to-eventvar",
+													"objectClass": "System",
+													"sid": 755405185899664,
+													"parameters": {
+														"variable": "counting_dts",
+														"value": "1"
+													}
+												},
+												{
+													"id": "set-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 625822014274532,
+													"parameters": {
+														"variable": "player_exist",
+														"value": "false"
+													}
+												},
+												{
+													"id": "destroy",
+													"objectClass": "player_skin",
+													"sid": 143353955878553
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 669459271357241,
+													"parameters": {
+														"seconds": "wait",
+														"use-timescale": true
+													}
+												},
+												{
+													"callFunction": "player_spawn",
+													"sid": 354343770470611,
+													"parameters": [
+														"1"
+													]
+												}
+											],
+											"sid": 841672928241259
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 750745078857254,
+											"parameters": {
+												"variable": "levelready"
+											}
+										},
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 252845005915957
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "player_spawn",
+											"sid": 373036240332669,
+											"parameters": [
+												"1"
+											]
+										}
+									],
+									"sid": 151678309197321
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "player",
+											"sid": 435896056319887,
+											"parameters": {
+												"object": "death_trig"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "player_death",
+											"sid": 183816304353970,
+											"parameters": [
+												"1",
+												"1"
+											]
+										}
+									],
+									"sid": 882118791115418
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-overlapping-at-offset",
+											"objectClass": "player",
+											"sid": 827564931029977,
+											"parameters": {
+												"object": "acid",
+												"offset-x": "0",
+												"offset-y": "-24"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "player_death",
+											"sid": 836961195358777,
+											"parameters": [
+												"1.5",
+												"2"
+											]
+										}
+									],
+									"sid": 356547863140971
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "player",
+											"sid": 112373867841934,
+											"parameters": {
+												"object": "spike"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "player_death",
+											"sid": 685200439464489,
+											"parameters": [
+												"1",
+												"3"
+											]
+										}
+									],
+									"sid": 853495904943007
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "player",
+											"sid": 598154145422810,
+											"parameters": {
+												"object": "saw"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "player_death",
+											"sid": 594962375809657,
+											"parameters": [
+												"1",
+												"3"
+											]
+										}
+									],
+									"sid": 445579306603401
+								}
+							],
+							"sid": 219731224660270
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "p control2",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 716956707261361,
+											"parameters": {
+												"key": 65
+											}
+										},
+										{
+											"id": "is-touching-object",
+											"objectClass": "Touch",
+											"sid": 493353485643664,
+											"parameters": {
+												"object": "mobui_left"
+											}
+										},
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 121293368022300,
+											"parameters": {
+												"key": 37
+											}
+										},
+										{
+											"id": "is-button-down",
+											"objectClass": "Gamepad",
+											"sid": 558602708780357,
+											"parameters": {
+												"gamepad": "0",
+												"button": "d-pad-left"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 144553184868948,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "player",
+													"sid": 311700253935461,
+													"parameters": {
+														"instance-variable": "crouch"
+													},
+													"isInverted": true
+												},
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 408446528306167,
+													"parameters": {
+														"variable": "transition"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "simulate-control",
+													"objectClass": "player",
+													"sid": 772864444873465,
+													"behaviorType": "Platform",
+													"parameters": {
+														"control": "left"
+													}
+												}
+											],
+											"sid": 952897278936964
+										}
+									],
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 548613472758890,
+											"parameters": {
+												"key": 68
+											}
+										},
+										{
+											"id": "is-touching-object",
+											"objectClass": "Touch",
+											"sid": 949387002166351,
+											"parameters": {
+												"object": "mobui_right"
+											}
+										},
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 766384486420390,
+											"parameters": {
+												"key": 39
+											}
+										},
+										{
+											"id": "is-button-down",
+											"objectClass": "Gamepad",
+											"sid": 409599647393879,
+											"parameters": {
+												"gamepad": "0",
+												"button": "d-pad-right"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 421993814584264,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "player",
+													"sid": 410636616399774,
+													"parameters": {
+														"instance-variable": "crouch"
+													},
+													"isInverted": true
+												},
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 744932271065960,
+													"parameters": {
+														"variable": "transition"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "simulate-control",
+													"objectClass": "player",
+													"sid": 425403795560334,
+													"behaviorType": "Platform",
+													"parameters": {
+														"control": "right"
+													}
+												}
+											],
+											"sid": 765879100997277
+										}
+									],
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-key-pressed",
+											"objectClass": "Keyboard",
+											"sid": 860888418753169,
+											"parameters": {
+												"key": 32
+											}
+										},
+										{
+											"id": "on-touched-object",
+											"objectClass": "Touch",
+											"sid": 663523806910625,
+											"parameters": {
+												"object": "mobui_a",
+												"type": "start"
+											}
+										},
+										{
+											"id": "on-key-pressed",
+											"objectClass": "Keyboard",
+											"sid": 248995327935364,
+											"parameters": {
+												"key": 38
+											}
+										},
+										{
+											"id": "on-key-pressed",
+											"objectClass": "Keyboard",
+											"sid": 831769248677032,
+											"parameters": {
+												"key": 87
+											}
+										},
+										{
+											"id": "on-button-pressed",
+											"objectClass": "Gamepad",
+											"sid": 238950453750249,
+											"parameters": {
+												"gamepad": "0",
+												"button": "button-a"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 780274255385457,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "player",
+													"sid": 222239696597611,
+													"parameters": {
+														"instance-variable": "crouch"
+													},
+													"isInverted": true
+												},
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 698073829570148,
+													"parameters": {
+														"variable": "transition"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "simulate-control",
+													"objectClass": "player",
+													"sid": 914950660940448,
+													"behaviorType": "Platform",
+													"parameters": {
+														"control": "jump"
+													}
+												}
+											],
+											"sid": 708507790153891
+										}
+									],
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 186666661926994,
+											"parameters": {
+												"key": 65
+											}
+										},
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 691974659038852,
+											"parameters": {
+												"key": 37
+											}
+										},
+										{
+											"id": "is-touching-object",
+											"objectClass": "Touch",
+											"sid": 482542395856146,
+											"parameters": {
+												"object": "mobui_left"
+											}
+										},
+										{
+											"id": "is-button-down",
+											"objectClass": "Gamepad",
+											"sid": 149842293442625,
+											"parameters": {
+												"gamepad": "0",
+												"button": "d-pad-left"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 353580541634977,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "player",
+													"sid": 751731138768670,
+													"parameters": {
+														"instance-variable": "crouch"
+													},
+													"isInverted": true
+												},
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 701209230112040,
+													"parameters": {
+														"variable": "transition"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "player_skin",
+													"sid": 179438989737207,
+													"parameters": {
+														"instance-variable": "dir",
+														"value": "\"left\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "player",
+													"sid": 125119409561513,
+													"parameters": {
+														"instance-variable": "cam_dir",
+														"value": "\"left\""
+													}
+												}
+											],
+											"sid": 141830577874173
+										}
+									],
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 596017803025130,
+											"parameters": {
+												"key": 68
+											}
+										},
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 270181894190073,
+											"parameters": {
+												"key": 39
+											}
+										},
+										{
+											"id": "is-touching-object",
+											"objectClass": "Touch",
+											"sid": 715291215329826,
+											"parameters": {
+												"object": "mobui_right"
+											}
+										},
+										{
+											"id": "is-button-down",
+											"objectClass": "Gamepad",
+											"sid": 673546394287302,
+											"parameters": {
+												"gamepad": "0",
+												"button": "d-pad-right"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 168417863727109,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "player",
+													"sid": 245042396791389,
+													"parameters": {
+														"instance-variable": "crouch"
+													},
+													"isInverted": true
+												},
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 542268228470848,
+													"parameters": {
+														"variable": "transition"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "player_skin",
+													"sid": 356639012028545,
+													"parameters": {
+														"instance-variable": "dir",
+														"value": "\"right\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "player",
+													"sid": 916145527189338,
+													"parameters": {
+														"instance-variable": "cam_dir",
+														"value": "\"right\""
+													}
+												}
+											],
+											"sid": 218883594978601
+										}
+									],
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-key-pressed",
+											"objectClass": "Keyboard",
+											"sid": 248168889275090,
+											"parameters": {
+												"key": 83
+											}
+										},
+										{
+											"id": "on-button-pressed",
+											"objectClass": "Gamepad",
+											"sid": 451228583831481,
+											"parameters": {
+												"gamepad": "0",
+												"button": "d-pad-down"
+											}
+										},
+										{
+											"id": "on-key-pressed",
+											"objectClass": "Keyboard",
+											"sid": 453957510712482,
+											"parameters": {
+												"key": 40
+											}
+										},
+										{
+											"id": "on-touched-object",
+											"objectClass": "Touch",
+											"sid": 315227528204411,
+											"parameters": {
+												"object": "mobui_down",
+												"type": "start"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 671635848210558,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-on-floor",
+													"objectClass": "player",
+													"sid": 541735003228348,
+													"behaviorType": "Platform"
+												},
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 396794292001409,
+													"parameters": {
+														"variable": "transition"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "player",
+													"sid": 473774786571555,
+													"parameters": {
+														"instance-variable": "crouch",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 265286334087355
+										}
+									],
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-key-released",
+											"objectClass": "Keyboard",
+											"sid": 649566748343887,
+											"parameters": {
+												"key": 83
+											}
+										},
+										{
+											"id": "on-button-released",
+											"objectClass": "Gamepad",
+											"sid": 578503156318772,
+											"parameters": {
+												"gamepad": "0",
+												"button": "d-pad-down"
+											}
+										},
+										{
+											"id": "on-key-released",
+											"objectClass": "Keyboard",
+											"sid": 510141640637250,
+											"parameters": {
+												"key": 40
+											}
+										},
+										{
+											"id": "on-touched-object",
+											"objectClass": "Touch",
+											"sid": 397774460668448,
+											"parameters": {
+												"object": "mobui_down",
+												"type": "end"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 907627187570977,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-on-floor",
+													"objectClass": "player",
+													"sid": 408771678424115,
+													"behaviorType": "Platform"
+												},
+												{
+													"id": "compare-boolean-eventvar",
+													"objectClass": "System",
+													"sid": 858789673118872,
+													"parameters": {
+														"variable": "transition"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "player",
+													"sid": 119210032835626,
+													"parameters": {
+														"instance-variable": "crouch",
+														"value": "false"
+													}
+												}
+											],
+											"sid": 731917809446642
+										}
+									],
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "player",
+											"sid": 437410374021658,
+											"parameters": {
+												"instance-variable": "crouch"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "player_skin",
+											"sid": 256642656452913,
+											"parameters": {
+												"animation": "\"crouch\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 201206440017495
+								}
+							],
+							"sid": 413637786045604
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "p anim2",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "group",
+									"disabled": false,
+									"title": "p dir2",
+									"description": "",
+									"isActiveOnStart": true,
+									"children": [
+										{
+											"eventType": "variable",
+											"name": "dir_change_speed",
+											"type": "number",
+											"initialValue": "0.2",
+											"comment": "",
+											"isStatic": false,
+											"isConstant": false,
+											"sid": 260463778740055
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "player_skin",
+													"sid": 725089242158119,
+													"parameters": {
+														"instance-variable": "dir",
+														"comparison": 0,
+														"value": "\"left\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-width",
+													"objectClass": "player_skin",
+													"sid": 810494894663546,
+													"parameters": {
+														"width": "lerp(Self.Width, -48, dir_change_speed * 60 * dt)"
+													}
+												}
+											],
+											"sid": 191032423330668
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "player_skin",
+													"sid": 705349688005737,
+													"parameters": {
+														"instance-variable": "dir",
+														"comparison": 0,
+														"value": "\"right\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-width",
+													"objectClass": "player_skin",
+													"sid": 750399407197256,
+													"parameters": {
+														"width": "lerp(Self.Width, 48, dir_change_speed * 60 * dt)"
+													}
+												}
+											],
+											"sid": 527332504975878
+										}
+									],
+									"sid": 392558762423586
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-moving",
+											"objectClass": "player",
+											"sid": 237336440927125,
+											"behaviorType": "Platform"
+										},
+										{
+											"id": "is-on-floor",
+											"objectClass": "player",
+											"sid": 460777621503753,
+											"behaviorType": "Platform"
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "player",
+											"sid": 996097684206646,
+											"parameters": {
+												"instance-variable": "crouch"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 570439215304497,
+											"parameters": {
+												"variable": "transition"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "player_skin",
+											"sid": 546502086949408,
+											"parameters": {
+												"animation": "\"run\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 623208232836851
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-moving",
+											"objectClass": "player",
+											"sid": 784961002560024,
+											"behaviorType": "Platform",
+											"isInverted": true
+										},
+										{
+											"id": "is-on-floor",
+											"objectClass": "player",
+											"sid": 261792528265538,
+											"behaviorType": "Platform"
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "player",
+											"sid": 406153542788497,
+											"parameters": {
+												"instance-variable": "crouch"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 365981195951515,
+											"parameters": {
+												"variable": "transition"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "player_skin",
+											"sid": 821967534697747,
+											"parameters": {
+												"animation": "\"idle\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 491761470198437
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-jumping",
+											"objectClass": "player",
+											"sid": 853391395539048,
+											"behaviorType": "Platform"
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "player",
+											"sid": 138149511065135,
+											"parameters": {
+												"instance-variable": "crouch"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 120011053759319,
+											"parameters": {
+												"variable": "transition"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "player_skin",
+											"sid": 716048718956035,
+											"parameters": {
+												"animation": "\"jump\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 661615841097126
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-falling",
+											"objectClass": "player",
+											"sid": 105661273014941,
+											"behaviorType": "Platform"
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "player",
+											"sid": 758616616472440,
+											"parameters": {
+												"instance-variable": "crouch"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 984004860350040,
+											"parameters": {
+												"variable": "transition"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "player_skin",
+											"sid": 531711770294111,
+											"parameters": {
+												"animation": "\"fall\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 221131740320657
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 416895640788090,
+											"parameters": {
+												"variable": "transition"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "player_skin",
+											"sid": 239720819189719,
+											"parameters": {
+												"animation": "\"idle\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 562335963759217
+								}
+							],
+							"sid": 334930492541814
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "p skin2",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-tick",
+											"objectClass": "System",
+											"sid": 843501475419270
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position-to-another-object",
+											"objectClass": "player_skin",
+											"sid": 875708820898759,
+											"parameters": {
+												"object": "player",
+												"image-point-optional": "0"
+											}
+										}
+									],
+									"sid": 449239148233998
+								}
+							],
+							"sid": 279382728630020
+						}
+					],
+					"sid": 824379227199425
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "cam2",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 848877430938768
+								}
+							],
+							"actions": [],
+							"sid": 910274559263124,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "player",
+											"sid": 494025557753232,
+											"parameters": {
+												"instance-variable": "crouch"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 647319864015844,
+											"parameters": {
+												"variable": "transition"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-y",
+											"objectClass": "cam",
+											"sid": 375289074181549,
+											"parameters": {
+												"y": "lerp(Self.Y, player.Y , 0.1 * 60 * dt)"
+											}
+										}
+									],
+									"sid": 120449296283771
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "player",
+											"sid": 530892467760942,
+											"parameters": {
+												"instance-variable": "crouch"
+											}
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 642562497645559,
+											"parameters": {
+												"variable": "transition"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-y",
+											"objectClass": "cam",
+											"sid": 940960270216223,
+											"parameters": {
+												"y": "lerp(Self.Y, player.Y + 128, 0.1 * 60 * dt)"
+											}
+										}
+									],
+									"sid": 495853225111858
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "player",
+											"sid": 458724082585892,
+											"parameters": {
+												"instance-variable": "cam_dir",
+												"comparison": 0,
+												"value": "\"none\""
+											}
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 340349018302996,
+											"parameters": {
+												"variable": "transition"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-x",
+											"objectClass": "cam",
+											"sid": 490630587918551,
+											"parameters": {
+												"x": "lerp(Self.X, player.X, 0.1 * 60 * dt)"
+											}
+										}
+									],
+									"sid": 921396574951008
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "player",
+											"sid": 122663835955306,
+											"parameters": {
+												"instance-variable": "cam_dir",
+												"comparison": 0,
+												"value": "\"right\""
+											}
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 735914737019682,
+											"parameters": {
+												"variable": "transition"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-x",
+											"objectClass": "cam",
+											"sid": 599621142949763,
+											"parameters": {
+												"x": "lerp(Self.X, player.X + 48, 0.1 * 60 * dt)"
+											}
+										}
+									],
+									"sid": 434744243274717
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "player",
+											"sid": 423415949611950,
+											"parameters": {
+												"instance-variable": "cam_dir",
+												"comparison": 0,
+												"value": "\"left\""
+											}
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 205425714900809,
+											"parameters": {
+												"variable": "transition"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-x",
+											"objectClass": "cam",
+											"sid": 362392901826274,
+											"parameters": {
+												"x": "lerp(Self.X, player.X - 48, 0.1 * 60 * dt)"
+											}
+										}
+									],
+									"sid": 436809203534233
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 114264910754261,
+											"parameters": {
+												"variable": "player_exist"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 986175058086333,
+											"parameters": {
+												"variable": "transition"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "cam",
+											"sid": 960223239265354,
+											"parameters": {
+												"x": "lerp(Self.X, player_death_pos.X, 0.05 * 60 * dt)",
+												"y": "lerp(Self.Y, player_death_pos.Y, 0.05 * 60 * dt)"
+											}
+										}
+									],
+									"sid": 388977293815590
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 106955660466269,
+											"parameters": {
+												"variable": "transition"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "cam",
+											"sid": 101564477128773,
+											"parameters": {
+												"x": "lerp(Self.X, player.X, 0.05 * 60 * dt)",
+												"y": "lerp(Self.Y, player.Y, 0.05 * 60 * dt)"
+											}
+										}
+									],
+									"sid": 721978431061662
+								}
+							]
+						}
+					],
+					"sid": 518235843867766
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "door2",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "variable",
+							"name": "a_brightness",
+							"type": "number",
+							"initialValue": "50",
+							"comment": "",
+							"isStatic": true,
+							"isConstant": false,
+							"sid": 183589047160307
+						},
+						{
+							"eventType": "variable",
+							"name": "b_brightness",
+							"type": "number",
+							"initialValue": "50",
+							"comment": "",
+							"isStatic": true,
+							"isConstant": false,
+							"sid": 783552955737231
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "grounddoors2",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "variable",
+									"name": "open_time",
+									"type": "number",
+									"initialValue": "0.75",
+									"comment": "",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 318107410193436
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "player",
+											"sid": 634707419492006,
+											"parameters": {
+												"object": "key_blue"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "key_blue",
+											"sid": 134538901999182
+										}
+									],
+									"sid": 138861236895150,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-tag-playing",
+													"objectClass": "Audio",
+													"sid": 325172554472221,
+													"parameters": {
+														"tag": "\"key\""
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 524151323257798,
+													"parameters": {
+														"audio-file": "key_sound",
+														"loop": "not-looping",
+														"volume": "0",
+														"stereo-pan": "0",
+														"tag-optional": "\"key\""
+													}
+												}
+											],
+											"sid": 937859224769337
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-width",
+													"objectClass": "door_blue",
+													"sid": 619562887276744,
+													"parameters": {
+														"comparison": 4,
+														"width": "Self.Height"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "tween-one-property",
+													"objectClass": "door_blue",
+													"sid": 882490257484404,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"door_closing\"",
+														"property": "offsetWidth",
+														"end-value": "0",
+														"time": "open_time",
+														"ease": "easeoutcubic",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no",
+														"repeat-count": "1"
+													}
+												}
+											],
+											"sid": 958851676520645
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 621296165325484
+												}
+											],
+											"actions": [
+												{
+													"id": "tween-one-property",
+													"objectClass": "door_blue",
+													"sid": 204790870997223,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"door_closing\"",
+														"property": "offsetHeight",
+														"end-value": "0",
+														"time": "open_time",
+														"ease": "easeoutcubic",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no",
+														"repeat-count": "1"
+													}
+												}
+											],
+											"sid": 748051926126552
+										},
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 910188196361463,
+													"parameters": {
+														"seconds": "open_time",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "destroy",
+													"objectClass": "door_blue",
+													"sid": 156743486154403
+												}
+											],
+											"sid": 845204851332741
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "player",
+											"sid": 906526777581886,
+											"parameters": {
+												"object": "key_purple"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "key_purple",
+											"sid": 599336270665437
+										}
+									],
+									"sid": 172589629153239,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-tag-playing",
+													"objectClass": "Audio",
+													"sid": 324398186420947,
+													"parameters": {
+														"tag": "\"key\""
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 342881905078036,
+													"parameters": {
+														"audio-file": "key_sound",
+														"loop": "not-looping",
+														"volume": "0",
+														"stereo-pan": "0",
+														"tag-optional": "\"key\""
+													}
+												}
+											],
+											"sid": 592838277776142
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-width",
+													"objectClass": "door_purple",
+													"sid": 395119390510919,
+													"parameters": {
+														"comparison": 4,
+														"width": "Self.Height"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "tween-one-property",
+													"objectClass": "door_purple",
+													"sid": 246737035197537,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"door_closing\"",
+														"property": "offsetWidth",
+														"end-value": "0",
+														"time": "open_time",
+														"ease": "easeoutcubic",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no",
+														"repeat-count": "1"
+													}
+												}
+											],
+											"sid": 359891279686286
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 683247219160575
+												}
+											],
+											"actions": [
+												{
+													"id": "tween-one-property",
+													"objectClass": "door_purple",
+													"sid": 986417593838227,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"door_closing\"",
+														"property": "offsetHeight",
+														"end-value": "0",
+														"time": "open_time",
+														"ease": "easeoutcubic",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no",
+														"repeat-count": "1"
+													}
+												}
+											],
+											"sid": 117694106275583
+										},
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 216548654633000,
+													"parameters": {
+														"seconds": "open_time",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "destroy",
+													"objectClass": "door_purple",
+													"sid": 631325166579994
+												}
+											],
+											"sid": 803218677404137
+										}
+									]
+								}
+							],
+							"sid": 233988272592175
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 179478495485697,
+									"parameters": {
+										"variable": "key_a"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 316467088898171,
+									"parameters": {
+										"variable": "a_brightness",
+										"value": "lerp(a_brightness, 100, 0.3 * 60 * dt)"
+									}
+								}
+							],
+							"sid": 414829172080540
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 775104885051548,
+									"parameters": {
+										"variable": "key_a"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 507810563848688,
+									"parameters": {
+										"variable": "a_brightness",
+										"value": "lerp(a_brightness, 50, 0.1 * 60 * dt)"
+									}
+								}
+							],
+							"sid": 354028078609283
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 572638894336238
+								}
+							],
+							"actions": [
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "ui_key_a",
+									"sid": 910233702471078,
+									"parameters": {
+										"effect": "\"Brightness\"",
+										"parameter-index": "0",
+										"value": "a_brightness"
+									}
+								}
+							],
+							"sid": 390843337275217
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 989336898425438,
+									"parameters": {
+										"variable": "key_b"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 929941378051083,
+									"parameters": {
+										"variable": "b_brightness",
+										"value": "lerp(b_brightness, 100, 0.3 * 60 * dt)"
+									}
+								}
+							],
+							"sid": 291308173738736
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 929149834861382,
+									"parameters": {
+										"variable": "key_b"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 923826055201332,
+									"parameters": {
+										"variable": "b_brightness",
+										"value": "lerp(b_brightness, 50, 0.1 * 60 * dt)"
+									}
+								}
+							],
+							"sid": 652835387804969
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 376694799209953
+								}
+							],
+							"actions": [
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "ui_key_b",
+									"sid": 623127108023241,
+									"parameters": {
+										"effect": "\"Brightness\"",
+										"parameter-index": "0",
+										"value": "b_brightness"
+									}
+								}
+							],
+							"sid": 272523139006078
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "player",
+									"sid": 924666995840349,
+									"parameters": {
+										"object": "key_a"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "key_a",
+									"sid": 866152309709844
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 454038885187101,
+									"parameters": {
+										"variable": "key_a",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 876430233509879,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-tag-playing",
+											"objectClass": "Audio",
+											"sid": 836568558834682,
+											"parameters": {
+												"tag": "\"key\""
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 824489780645671,
+											"parameters": {
+												"audio-file": "key_sound",
+												"loop": "not-looping",
+												"volume": "0",
+												"stereo-pan": "0",
+												"tag-optional": "\"key\""
+											}
+										}
+									],
+									"sid": 790305711892281
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "player",
+									"sid": 666177123472257,
+									"parameters": {
+										"object": "key_b"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "key_b",
+									"sid": 960106843774132
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 399661090339572,
+									"parameters": {
+										"variable": "key_b",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 326871166864731,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-tag-playing",
+											"objectClass": "Audio",
+											"sid": 638782290175814,
+											"parameters": {
+												"tag": "\"key\""
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 156723268157004,
+											"parameters": {
+												"audio-file": "key_sound",
+												"loop": "not-looping",
+												"volume": "0",
+												"stereo-pan": "0",
+												"tag-optional": "\"key\""
+											}
+										}
+									],
+									"sid": 381596747257857
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 236594323119942,
+									"parameters": {
+										"variable": "levelready"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 661790654474939
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 304327156307624,
+									"parameters": {
+										"object-to-create": "doorb",
+										"layer": "\"door\"",
+										"x": "door.X-40",
+										"y": "door.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 391210982202441,
+									"parameters": {
+										"object-to-create": "doora",
+										"layer": "\"door\"",
+										"x": "door.X+40",
+										"y": "door.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								}
+							],
+							"sid": 658141065997953
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 207878712253033,
+									"parameters": {
+										"variable": "key_a"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 937717170384380,
+									"parameters": {
+										"variable": "key_b"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "door",
+									"sid": 149782326499668,
+									"parameters": {
+										"instance-variable": "open",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 394546377069259
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 904821158249697,
+									"parameters": {
+										"variable": "key_a"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 288885526660323,
+									"parameters": {
+										"variable": "key_b"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "door",
+									"sid": 306112674217812,
+									"parameters": {
+										"instance-variable": "open",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 257644272178168,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "door",
+									"sid": 775955515284656,
+									"parameters": {
+										"instance-variable": "open"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-width",
+									"objectClass": "doorb",
+									"sid": 364098175159229,
+									"parameters": {
+										"width": "lerp(Self.Width, 24, 0.1 * 60 * dt)"
+									}
+								},
+								{
+									"id": "set-width",
+									"objectClass": "doora",
+									"sid": 123279735993401,
+									"parameters": {
+										"width": "lerp(Self.Width, 24, 0.1 * 60 * dt)"
+									}
+								}
+							],
+							"sid": 387974809482861
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "door",
+									"sid": 326794472140331,
+									"parameters": {
+										"instance-variable": "open"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-width",
+									"objectClass": "doorb",
+									"sid": 347535348720096,
+									"parameters": {
+										"width": "lerp(Self.Width, 40, 0.1 * 60 * dt)"
+									}
+								},
+								{
+									"id": "set-width",
+									"objectClass": "doora",
+									"sid": 588530219087004,
+									"parameters": {
+										"width": "lerp(Self.Width, 40, 0.1 * 60 * dt)"
+									}
+								}
+							],
+							"sid": 883170294591452
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "player",
+									"sid": 588737395647055,
+									"parameters": {
+										"object": "door"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "door",
+									"sid": 865797743646487,
+									"parameters": {
+										"instance-variable": "open"
+									}
+								},
+								{
+									"id": "is-on-floor",
+									"objectClass": "player",
+									"sid": 271480611727728,
+									"disabled": true,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 755242761301478,
+									"parameters": {
+										"variable": "transition",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "player",
+									"sid": 649241396363860,
+									"parameters": {
+										"instance-variable": "cam_dir",
+										"value": "\"none\""
+									}
+								},
+								{
+									"id": "tween-one-property",
+									"objectClass": "player_skin",
+									"sid": 651147067413730,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"fade\"",
+										"property": "offsetOpacity",
+										"end-value": "0",
+										"time": "1",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 863887772391136,
+									"parameters": {
+										"seconds": "1",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 451212914443620,
+									"parameters": {
+										"variable": "transition",
+										"value": "false"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 319902542233880,
+									"parameters": {
+										"layout": "editor_hall"
+									}
+								},
+								{
+									"id": "reset-eventvar",
+									"objectClass": "System",
+									"sid": 734175067890930,
+									"parameters": {
+										"variable": "key_a"
+									}
+								},
+								{
+									"id": "reset-eventvar",
+									"objectClass": "System",
+									"sid": 932219627878683,
+									"parameters": {
+										"variable": "key_b"
+									}
+								}
+							],
+							"sid": 695053298462033
+						}
+					],
+					"sid": 970040880876826
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "pause2",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 589570378390030,
+									"parameters": {
+										"variable": "pause"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "mobui_down",
+									"sid": 366614950907315,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "mobui_left",
+									"sid": 571157099562210,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "mobui_right",
+									"sid": 150089504661486,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "mobui_a",
+									"sid": 654025177718919,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 553163040876872
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 998650377522781,
+									"parameters": {
+										"variable": "pause"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "mobui_down",
+									"sid": 495923746995193,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "mobui_left",
+									"sid": 920269141422647,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "mobui_right",
+									"sid": 206783341743809,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "mobui_a",
+									"sid": 475451512497474,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 201215750789524
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-touched-object",
+									"objectClass": "Touch",
+									"sid": 697389381029188,
+									"parameters": {
+										"object": "mobui_pause",
+										"type": "end"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "toggle-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 928164718640884,
+									"parameters": {
+										"variable": "pause"
+									}
+								}
+							],
+							"sid": 973340823698141,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 973483377083758,
+									"parameters": {
+										"key": 27
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "toggle-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 644631598044343,
+									"parameters": {
+										"variable": "pause"
+									}
+								}
+							],
+							"sid": 292049885786022,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 212780378410404,
+									"parameters": {
+										"variable": "pause"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-opacity",
+									"objectClass": "System",
+									"sid": 608697994103939,
+									"parameters": {
+										"layer": "\"pause_ul\"",
+										"opacity": "lerp(LayerOpacity(\"pause_ul\"), 100, 0.1)"
+									}
+								},
+								{
+									"id": "set-layer-opacity",
+									"objectClass": "System",
+									"sid": 180854849206515,
+									"parameters": {
+										"layer": "\"buttontext\"",
+										"opacity": "lerp(LayerOpacity(\"buttontext\"), 100, 0.1)"
+									}
+								},
+								{
+									"id": "set-time-scale",
+									"objectClass": "System",
+									"sid": 472926661170275,
+									"parameters": {
+										"time-scale": "0"
+									}
+								},
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 752212242957779,
+									"parameters": {
+										"layer": "\"pause_ul\"",
+										"interactive": true
+									}
+								}
+							],
+							"sid": 367478888972038,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 506363252615195
+										}
+									],
+									"actions": [
+										{
+											"id": "add-filter-effect",
+											"objectClass": "Audio",
+											"sid": 200200272306472,
+											"parameters": {
+												"tag": "\"levelloop\"",
+												"type": "low-pass",
+												"frequency": "350",
+												"detune": "0",
+												"q": "1",
+												"gain": "0",
+												"mix": "100"
+											}
+										}
+									],
+									"sid": 185582865011282
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 163554407340513,
+									"parameters": {
+										"variable": "pause"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-opacity",
+									"objectClass": "System",
+									"sid": 945002851642842,
+									"parameters": {
+										"layer": "\"pause_ul\"",
+										"opacity": "lerp(LayerOpacity(\"pause_ul\"), 0, 0.2)"
+									}
+								},
+								{
+									"id": "set-layer-opacity",
+									"objectClass": "System",
+									"sid": 396321946506665,
+									"parameters": {
+										"layer": "\"buttontext\"",
+										"opacity": "lerp(LayerOpacity(\"buttontext\"), 0, 0.2)"
+									}
+								},
+								{
+									"id": "set-time-scale",
+									"objectClass": "System",
+									"sid": 242266853073432,
+									"parameters": {
+										"time-scale": "1"
+									}
+								},
+								{
+									"id": "set-layer-interactive",
+									"objectClass": "System",
+									"sid": 367339344646305,
+									"parameters": {
+										"layer": "\"pause_ul\"",
+										"interactive": false
+									}
+								}
+							],
+							"sid": 972120760212620,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 552489667299432
+										}
+									],
+									"actions": [
+										{
+											"id": "remove-all-effects",
+											"objectClass": "Audio",
+											"sid": 544521886965234,
+											"parameters": {
+												"tag": "\"levelloop\""
+											}
+										}
+									],
+									"sid": 372619431169008
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 229507911009071
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-opacity",
+									"objectClass": "System",
+									"sid": 325015054913578,
+									"parameters": {
+										"layer": "\"pause_ul\"",
+										"opacity": "0"
+									}
+								},
+								{
+									"id": "set-layer-opacity",
+									"objectClass": "System",
+									"sid": 548354078082399,
+									"parameters": {
+										"layer": "\"buttontext\"",
+										"opacity": "0"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 336972535370072,
+									"parameters": {
+										"variable": "pause",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 363837848055541
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-touched-object",
+									"objectClass": "Touch",
+									"sid": 697737427746514,
+									"parameters": {
+										"object": "ui_button",
+										"type": "end"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 390494037787352,
+									"parameters": {
+										"variable": "pause"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 597864454640909,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "has-tags",
+											"objectClass": "ui_button",
+											"sid": 119282438828678,
+											"parameters": {
+												"tags": "\"pause_continue\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "toggle-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 165459846382350,
+											"parameters": {
+												"variable": "pause"
+											}
+										}
+									],
+									"sid": 760393341434208
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "has-tags",
+											"objectClass": "ui_button",
+											"sid": 783740751843538,
+											"parameters": {
+												"tags": "\"pause_menu\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "go-to-layout",
+											"objectClass": "System",
+											"sid": 312574138820767,
+											"parameters": {
+												"layout": "menu"
+											}
+										}
+									],
+									"sid": 729108417159271
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "has-tags",
+											"objectClass": "ui_button",
+											"sid": 569022688881004,
+											"parameters": {
+												"tags": "\"pause_edit\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "go-to-layout",
+											"objectClass": "System",
+											"sid": 719336410509935,
+											"parameters": {
+												"layout": "editor"
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 316736800218609,
+											"parameters": {
+												"variable": "loadedfromgame",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 266591705995788
+								}
+							]
+						}
+					],
+					"sid": 159588072594323
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "newgameplaymoment",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "player run particles2",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-created",
+											"objectClass": "player",
+											"sid": 499477830280592
+										}
+									],
+									"actions": [
+										{
+											"id": "spawn-another-object",
+											"objectClass": "player",
+											"sid": 893390159138414,
+											"parameters": {
+												"object": "player_run_particles",
+												"layer": "\"foreword\"",
+												"image-point": "\"runparts\"",
+												"create-hierarchy": false,
+												"template-name": "\"default\""
+											}
+										}
+									],
+									"sid": 984507955696375
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-destroyed",
+											"objectClass": "player",
+											"sid": 409437926558002
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "player_run_particles",
+											"sid": 600953317876398
+										}
+									],
+									"sid": 389835299941059
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-tick",
+											"objectClass": "System",
+											"sid": 835565004460766
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "player_run_particles",
+											"sid": 698449235090799,
+											"parameters": {
+												"x": "player.ImagePointX(\"runparts\")",
+												"y": "player.ImagePointY(\"runparts\")"
+											}
+										}
+									],
+									"sid": 528971486090514
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-moving",
+											"objectClass": "player",
+											"sid": 143222193111460,
+											"behaviorType": "Platform"
+										},
+										{
+											"id": "is-on-floor",
+											"objectClass": "player",
+											"sid": 246819612526016,
+											"behaviorType": "Platform"
+										}
+									],
+									"actions": [
+										{
+											"id": "set-spraying",
+											"objectClass": "player_run_particles",
+											"sid": 675226655569602,
+											"parameters": {
+												"state": "spraying"
+											}
+										}
+									],
+									"sid": 771727545353969
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-moving",
+											"objectClass": "player",
+											"sid": 694306712170921,
+											"behaviorType": "Platform",
+											"isInverted": true
+										},
+										{
+											"id": "is-on-floor",
+											"objectClass": "player",
+											"sid": 781045201745822,
+											"behaviorType": "Platform"
+										}
+									],
+									"actions": [
+										{
+											"id": "set-spraying",
+											"objectClass": "player_run_particles",
+											"sid": 969406741662861,
+											"parameters": {
+												"state": "not-spraying"
+											}
+										}
+									],
+									"sid": 285614873922078
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-floor",
+											"objectClass": "player",
+											"sid": 966590497903012,
+											"behaviorType": "Platform",
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-spraying",
+											"objectClass": "player_run_particles",
+											"sid": 945257813968100,
+											"parameters": {
+												"state": "not-spraying"
+											}
+										}
+									],
+									"sid": 228955940431482
+								}
+							],
+							"sid": 705421829641563
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "players sound2",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-moving",
+											"objectClass": "player",
+											"sid": 152492390711453,
+											"behaviorType": "Platform"
+										},
+										{
+											"id": "is-on-floor",
+											"objectClass": "player",
+											"sid": 988113968204282,
+											"behaviorType": "Platform"
+										},
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 725683520804918
+										}
+									],
+									"actions": [],
+									"sid": 554591874237888,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 893268621699524,
+													"parameters": {
+														"audio-file": "player_run_sound",
+														"loop": "looping",
+														"volume": "-10",
+														"stereo-pan": "0",
+														"tag-optional": "\"player_run_sound\""
+													}
+												},
+												{
+													"id": "set-playback-rate",
+													"objectClass": "Audio",
+													"sid": 395494540196872,
+													"parameters": {
+														"tag": "\"player_run_sound\"",
+														"playback-rate": "random(0.9, 1.1)"
+													}
+												}
+											],
+											"sid": 315651733563418
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-on-floor",
+											"objectClass": "player",
+											"sid": 549223764571178,
+											"behaviorType": "Platform",
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "stop",
+											"objectClass": "Audio",
+											"sid": 454098845365172,
+											"parameters": {
+												"tag": "\"player_run_sound\""
+											}
+										}
+									],
+									"sid": 118160392951889
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-stopped",
+											"objectClass": "player",
+											"sid": 518918732917799,
+											"behaviorType": "Platform"
+										}
+									],
+									"actions": [
+										{
+											"id": "stop",
+											"objectClass": "Audio",
+											"sid": 990369352949314,
+											"parameters": {
+												"tag": "\"player_run_sound\""
+											}
+										}
+									],
+									"sid": 636122219805573
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-jump",
+											"objectClass": "player",
+											"sid": 827916729793575,
+											"behaviorType": "Platform"
+										}
+									],
+									"actions": [],
+									"sid": 803019313356294,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 740847480201503,
+													"parameters": {
+														"audio-file": "player_jump_sound",
+														"loop": "not-looping",
+														"volume": "-10",
+														"stereo-pan": "0",
+														"tag-optional": "\"player_jump_sound\""
+													}
+												},
+												{
+													"id": "set-playback-rate",
+													"objectClass": "Audio",
+													"sid": 772932292386974,
+													"parameters": {
+														"tag": "\"player_jump_sound\"",
+														"playback-rate": "random(0.9, 1.1)"
+													}
+												}
+											],
+											"sid": 473071394445131
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-landed",
+											"objectClass": "player",
+											"sid": 816838836609317,
+											"behaviorType": "Platform"
+										}
+									],
+									"actions": [],
+									"sid": 915708241633478,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 824531260661196,
+													"parameters": {
+														"audio-file": "player_landed_sound",
+														"loop": "not-looping",
+														"volume": "-10",
+														"stereo-pan": "0",
+														"tag-optional": "\"player_landed_sound\""
+													}
+												},
+												{
+													"id": "set-playback-rate",
+													"objectClass": "Audio",
+													"sid": 999367552239529,
+													"parameters": {
+														"tag": "\"player_landed_sound\"",
+														"playback-rate": "random(0.9, 1.1)"
+													}
+												}
+											],
+											"sid": 593140786506733
+										}
+									]
+								}
+							],
+							"sid": 937965476048121
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "lowgraph2",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 945222068409401,
+											"parameters": {
+												"variable": "lowgraph"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Particles",
+											"sid": 969175987597345
+										},
+										{
+											"id": "destroy",
+											"objectClass": "dash_effect2",
+											"sid": 538129693934084
+										},
+										{
+											"id": "destroy",
+											"objectClass": "dash_effect6",
+											"sid": 272279654257002
+										},
+										{
+											"id": "destroy",
+											"objectClass": "dash_available_effect",
+											"sid": 869748508914670
+										},
+										{
+											"id": "destroy",
+											"objectClass": "player_run_particles",
+											"sid": 890846379842299
+										}
+									],
+									"sid": 724840550275051,
+									"disabled": true
+								}
+							],
+							"sid": 408096744540096
+						}
+					],
+					"sid": 431444998466976
+				}
+			],
+			"sid": 249574831538709
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "mobbui"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "music"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "button"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "devalert"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "counting"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "quality"
+		}
+	],
+	"sid": 550845546710448
+}

@@ -1,0 +1,60 @@
+{
+	"name": "door",
+	"plugin-id": "Sprite",
+	"sid": 689022322720348,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "open",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 680971776040803
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 37,
+						"height": 96,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4341263,
+						"collisionPoly": {
+							"points": [
+								0.21621621621621623,
+								0.9270833333333321,
+								0.8378378378378373,
+								0.9270833333333321,
+								0.8378378378378373,
+								1,
+								0.21621621621621623,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 951435263749991,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

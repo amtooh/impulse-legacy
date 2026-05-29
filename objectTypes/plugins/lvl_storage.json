@@ -1,0 +1,14 @@
+{
+	"name": "lvl_storage",
+	"plugin-id": "LocalStorage",
+	"sid": 814495137498701,
+	"singleglobal-inst": {
+		"type": "lvl_storage",
+		"properties": {
+			"in-memory-only": false
+		},
+		"uid": 8,
+		"sid": 909195053711410,
+		"tags": ""
+	}
+}

@@ -1,0 +1,40 @@
+{
+	"name": "Particles",
+	"plugin-id": "Particles",
+	"sid": 509666841051797,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "pinUid",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 392433695066324
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "glowhorizontal",
+			"name": "GlowHorizontal"
+		},
+		{
+			"effectId": "glowvertical",
+			"name": "GlowVertical"
+		}
+	],
+	"image": {
+		"width": 2,
+		"height": 2,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 6710140,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

@@ -1,0 +1,26 @@
+{
+	"name": "devalert",
+	"plugin-id": "Text",
+	"sid": 988360270221399,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 503695092110211
+		},
+		{
+			"behaviorId": "Anchor",
+			"name": "Anchor",
+			"sid": 216067399840688
+		}
+	],
+	"effectTypes": [
+		{
+			"effectId": "skymen_BetterOutline",
+			"name": "BetterOutline"
+		}
+	]
+}

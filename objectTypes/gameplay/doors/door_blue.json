@@ -1,0 +1,34 @@
+{
+	"name": "door_blue",
+	"plugin-id": "TiledBg",
+	"sid": 891088010152998,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 833299116559128
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 654243825393054
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 24,
+		"height": 24,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 1519717,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

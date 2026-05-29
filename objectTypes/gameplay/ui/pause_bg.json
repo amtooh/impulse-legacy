@@ -1,0 +1,29 @@
+{
+	"name": "pause_bg",
+	"plugin-id": "TiledBg",
+	"sid": 248282549092550,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Anchor",
+			"sid": 381112759827775
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 16,
+		"height": 16,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 3458094,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}
